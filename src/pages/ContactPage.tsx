@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, X } from 'lucide-react';
