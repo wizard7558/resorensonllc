@@ -1,8 +1,27 @@
 import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, X } from 'lucide-react';
 
 const ContactPage = () => {
+  useEffect(() => {
+    // Ensure HubSpot script is loaded and create the form
+    const loadHubSpotForm = () => {
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          region: "na1",
+          portalId: "45832447",
+          formId: "43badb32-d497-44b9-b1eb-ae894de45952",
+          target: "#hubspot-contact-form"
+        });
+      } else {
+        // If script isn't loaded yet, wait and try again
+        setTimeout(loadHubSpotForm, 100);
+      }
+    };
+
+    loadHubSpotForm();
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -31,13 +50,8 @@ const ContactPage = () => {
             <div className="lg:col-span-3">
               <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Start Your Project</h2>
-                {/* HubSpot Contact Form */}
-                <div 
-                  className="hs-form-frame" 
-                  data-region="na1" 
-                  data-form-id="43badb32-d497-44b9-b1eb-ae894de45952" 
-                  data-portal-id="45832447"
-                ></div>
+                {/* HubSpot Contact Form Container */}
+                <div id="hubspot-contact-form"></div>
               </div>
             </div>
 
