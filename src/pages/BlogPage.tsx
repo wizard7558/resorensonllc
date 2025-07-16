@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import SEO from '../components/SEO';
-import { Calendar, Clock, ArrowRight, TrendingUp, CheckCircle } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const BlogPage = () => {
@@ -51,6 +51,17 @@ const BlogPage = () => {
   ];
 
   const categories = ['All', 'Strategy', 'Web Analytics', 'Integration', 'Data Management', 'Analytics', 'Platform Review'];
+
+  // HubSpot form embed
+  useEffect(() => {
+    // Check if the script is already present
+    if (!document.querySelector('script[src="https://js.hsforms.net/forms/embed/45832447.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://js.hsforms.net/forms/embed/45832447.js';
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
