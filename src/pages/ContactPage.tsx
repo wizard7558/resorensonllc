@@ -50,7 +50,9 @@ const ContactPage = () => {
             <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Start Your Project</h2>
               {/* HubSpot Contact Form Container */}
-              <div id="hubspot-contact-form"></div>
+              <script src="https://js.hsforms.net/forms/embed/45832447.js" defer></script> 
+                <div class="hs-form-frame" data-region="na1" data-form-id="43badb32-d497-44b9-b1eb-ae894de45952" data-portal-id="45832447">
+                </div>
             </div>
           </div>
 
