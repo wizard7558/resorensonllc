@@ -45,24 +45,24 @@ const ContactPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-            <div className="lg:col-span-3">
-              <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Start Your Project</h2>
-                {/* HubSpot Contact Form Container */}
-                <div id="hubspot-contact-form"></div>
-              </div>
+          {/* Contact Form - Centered under header */}
+          <div className="max-w-3xl mx-auto mb-16">
+            <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Start Your Project</h2>
+              {/* HubSpot Contact Form Container */}
+              <div id="hubspot-contact-form"></div>
             </div>
+          </div>
 
-            {/* Right Column - Contact Info & Description */}
-            <div className="lg:col-span-2 space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
-                <p className="text-gray-600 mb-8 leading-relaxed">
-                  Ready to optimize your MarTech stack? Fill out the form and we'll get back to you 
-                  within 4 hours during business hours to discuss your specific needs and challenges.
-                </p>
-              </div>
+          {/* Get In Touch and What to Expect - Side by side below form */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Get In Touch Section */}
+            <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                Ready to optimize your MarTech stack? Fill out the form and we'll get back to you 
+                within 4 hours during business hours to discuss your specific needs and challenges.
+              </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-3">
@@ -101,41 +101,42 @@ const ContactPage = () => {
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="bg-white rounded-lg border border-gray-200 p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">What to Expect</h3>
+            {/* What to Expect Section */}
+            <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What to Expect</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Initial Response</h4>
+                    <p className="text-gray-600 text-sm">Within 4 hours during business hours</p>
+                  </div>
+                </div>
                 
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Initial Response</h4>
-                      <p className="text-gray-600 text-sm">Within 4 hours during business hours</p>
-                    </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Discovery Call</h4>
+                    <p className="text-gray-600 text-sm">30-minute consultation to understand your needs</p>
                   </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Discovery Call</h4>
-                      <p className="text-gray-600 text-sm">30-minute consultation to understand your needs</p>
-                    </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Custom Proposal</h4>
+                    <p className="text-gray-600 text-sm">Detailed project scope and timeline</p>
                   </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Custom Proposal</h4>
-                      <p className="text-gray-600 text-sm">Detailed project scope and timeline</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Project Kickoff</h4>
-                      <p className="text-gray-600 text-sm">Strategic planning and implementation begins</p>
-                    </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Project Kickoff</h4>
+                    <p className="text-gray-600 text-sm">Strategic planning and implementation begins</p>
                   </div>
                 </div>
               </div>
