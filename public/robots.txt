@@ -1,0 +1,25 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://resorensonllc.com/sitemap.xml
+
+# Disallow assessment results (dynamic content)
+Disallow: /assessment?*
+
+# Allow important pages
+Allow: /
+Allow: /services
+Allow: /case-studies
+Allow: /blog
+Allow: /contact
+Allow: /assessment
+
+# Block common bot paths
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*?*utm_*
+Disallow: /*?*fbclid*
+Disallow: /*?*gclid*
