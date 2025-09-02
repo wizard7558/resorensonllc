@@ -82,9 +82,9 @@ const AboutPage = () => {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-lg text-gray-600 leading-relaxed mb-8">
-            Currently serving as Marketing Analytics Manager at Fiat Growth, Riley works with innovative 
-            fintech and insurtech brands including Chime, Lemonade, and Copper Banking, helping generate 
-            over $1.6 billion in new revenue across 85+ client engagements.
+            RESorenson LLC has served clients of all sizes and industries, generating
+            over $100M in new revenue across 85+ client engagements. Notable clients
+            include DoorDash, Rippling, Uber, Reddit, and Penn Interactive. 
           </p>
         </div>
       </section>
