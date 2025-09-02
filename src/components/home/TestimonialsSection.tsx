@@ -10,8 +10,8 @@ const TestimonialsSection = () => {
       content: 'RESorenson transformed our chaotic MarTech stack into a revenue-generating machine. Our MQL-to-SQL conversion rate jumped from 12% to 41% in just 4 months.',
       metrics: {
         icon: TrendingUp,
-        value: '340%',
-        label: 'MQL-to-SQL Conversion Increase'
+        value: '2.6x',
+        label: 'ROAS Improvement'
       }
     },
     {
@@ -31,9 +31,9 @@ const TestimonialsSection = () => {
       company: 'Growth Dynamics',
       content: 'Our lead scoring and routing automation reduced our sales cycle by 35% while improving lead quality. The ROI was immediate and continues to compound.',
       metrics: {
-        icon: Users,
-        value: '35%',
-        label: 'Sales Cycle Reduction'
+        icon: TrendingUp,
+        value: '$100M+',
+        label: 'Revenue Impact Generated'
       }
     }
   ];

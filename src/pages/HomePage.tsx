@@ -14,19 +14,19 @@ const HomePage = () => {
     {
       author: "Sarah Chen",
       rating: 5,
-      reviewBody: "RESorenson transformed our chaotic MarTech stack into a revenue-generating machine. Our MQL-to-SQL conversion rate jumped from 12% to 41% in just 4 months.",
+      reviewBody: "RESorenson transformed our chaotic MarTech stack into a revenue-generating machine. Our MQL-to-SQL conversion rate jumped from 12% to 41% in just 4 months. Part of over $100M in revenue impact generated.",
       datePublished: "2024-12-15"
     },
     {
       author: "David Rodriguez", 
       rating: 5,
-      reviewBody: "The data infrastructure overhaul eliminated our attribution blind spots completely. We now have full visibility into our customer journey and can optimize with confidence.",
+      reviewBody: "The data infrastructure overhaul eliminated our attribution blind spots completely. We now have full visibility into our customer journey and achieved 2.6x ROAS improvement.",
       datePublished: "2024-11-20"
     },
     {
       author: "Jennifer Park",
       rating: 5,
-      reviewBody: "Our lead scoring and routing automation reduced our sales cycle by 35% while improving lead quality. The ROI was immediate and continues to compound.",
+      reviewBody: "Our lead scoring and routing automation reduced our sales cycle by 35% while improving lead quality. Contributing to $100M+ in total revenue impact across all clients.",
       datePublished: "2024-10-10"
     }
   ];

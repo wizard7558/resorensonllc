@@ -35,7 +35,7 @@ const AboutPage = () => {
   ];
 
   const businessMetrics = [
-    { value: '$100M+', label: 'Revenue Generated' },
+    { value: '$100M+', label: 'Revenue Impact Generated' },
     { value: '85+', label: 'Client Engagements' },
     { value: '2.6x', label: 'AVG ROAS Improvement' }
   ];

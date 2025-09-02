@@ -3,21 +3,21 @@ import { TrendingUp, Clock, Users, DollarSign } from 'lucide-react';
 
 const ROICounter = () => {
   const [stats, setStats] = useState({
-    avgROI: 0,
+    roasImprovement: 0,
     projectTime: 0,
     clientsServed: 0,
-    revenueGenerated: 0
+    revenueImpact: 0
   });
 
   useEffect(() => {
     const interval = setInterval(() => {
       setStats(prev => ({
-        avgROI: Math.min(prev.avgROI + 5, 485),
+        roasImprovement: Math.min(prev.roasImprovement + 0.1, 2.6),
         projectTime: Math.min(prev.projectTime + 1, 60),
         clientsServed: Math.min(prev.clientsServed + 1, 50),
-        revenueGenerated: Math.min(prev.revenueGenerated + 100000, 15000000)
+        revenueImpact: Math.min(prev.revenueImpact + 1000000, 100000000)
       }));
-    }, 100);
+    }, 50);
 
     return () => clearInterval(interval);
   }, []);
@@ -25,9 +25,9 @@ const ROICounter = () => {
   const statItems = [
     {
       icon: TrendingUp,
-      value: `${stats.avgROI}%`,
-      label: 'Average ROI Improvement',
-      description: 'Across all client implementations'
+      value: `${stats.roasImprovement.toFixed(1)}x`,
+      label: 'Average ROAS Improvement',
+      description: 'Return on ad spend optimization'
     },
     {
       icon: Clock,
@@ -43,7 +43,7 @@ const ROICounter = () => {
     },
     {
       icon: DollarSign,
-      value: `$${(stats.revenueGenerated / 1000000).toFixed(1)}M`,
+      value: `$${(stats.revenueImpact / 1000000).toFixed(0)}M+`,
       label: 'Revenue Impact Generated',
       description: 'Measurable business outcomes'
     }
