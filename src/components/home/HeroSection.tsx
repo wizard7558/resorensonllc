@@ -69,7 +69,7 @@ const HeroSection = () => {
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-gray-200 shadow-sm">
               <div className="flex items-center space-x-2 mb-2">
                 <TrendingUp className="h-5 w-5" style={{ color: '#9D2235' }} />
-                <span className="text-sm text-gray-600">Conversion Rate</span>
+                <span className="text-sm text-gray-600">Conversion Rate Improvement</span>
               </div>
               <div className="text-2xl font-bold text-gray-900">
                 +{animatedMetrics.conversion}%
@@ -79,7 +79,7 @@ const HeroSection = () => {
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-gray-200 shadow-sm">
               <div className="flex items-center space-x-2 mb-2">
                 <DollarSign className="h-5 w-5 text-gray-600" />
-                <span className="text-sm text-gray-600">Revenue Impact</span>
+                <span className="text-sm text-gray-600">Average Revenue Impact</span>
               </div>
               <div className="text-2xl font-bold text-gray-900">
                 ${(animatedMetrics.revenue / 1000000).toFixed(1)}M
