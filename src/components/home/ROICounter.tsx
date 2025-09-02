@@ -44,7 +44,7 @@ const ROICounter = () => {
     {
       icon: DollarSign,
       value: `$${(stats.revenueImpact / 1000000).toFixed(0)}M+`,
-      label: 'Average Revenue Impact Generated',
+      label: 'Total Revenue Impact Generated',
       description: 'Measurable business outcomes'
     }
   ];
