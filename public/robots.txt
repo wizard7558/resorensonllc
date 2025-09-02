@@ -15,6 +15,7 @@ Allow: /case-studies
 Allow: /blog
 Allow: /contact
 Allow: /assessment
+Allow: /about
 
 # Block common bot paths
 Disallow: /admin/
