@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 const AboutPage = () => {
   const certifications = [
     'Google Analytics Certified',
-    'Google Ads Certified', 
-    'Microsoft Excel Certified',
-    'B2B Marketing Specialist'
+    'HubSpot Super Admin Certified', 
+    'Mixpanel Certified',
+    'MarOps Expert'
   ];
 
   const achievements = [
