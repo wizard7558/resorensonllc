@@ -144,27 +144,6 @@ const TechnologyShowcase = () => {
             </div>
           ))}
         </div>
-
-        <div className="mt-16 text-center">
-          <div className="inline-flex flex-wrap items-center justify-center gap-4 bg-gray-50 p-6 rounded-lg border border-gray-200">
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#9D2235' }}></div>
-              <span className="text-gray-700">Google Analytics Certified</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
-              <span className="text-gray-700">HubSpot Certified</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#9D2235', opacity: 0.7 }}></div>
-              <span className="text-gray-700">Salesforce Certified</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-gray-500 rounded-full"></div>
-              <span className="text-gray-700">Snowflake Certified</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
