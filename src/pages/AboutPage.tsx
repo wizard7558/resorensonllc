@@ -37,8 +37,7 @@ const AboutPage = () => {
   const businessMetrics = [
     { value: '$100M+', label: 'Revenue Generated' },
     { value: '85+', label: 'Client Engagements' },
-    { value: '33', label: 'Games Started' },
-    { value: '4', label: 'Years Division I' }
+    { value: '2.6x', label: 'AVG ROAS Improvement' }
   ];
 
   return (
@@ -66,7 +65,7 @@ const AboutPage = () => {
           </div>
 
           {/* Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
             {businessMetrics.map((metric, index) => (
               <div key={index} className="text-center bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                 <div className="text-2xl md:text-3xl font-bold mb-2" style={{ color: '#9D2235' }}>
