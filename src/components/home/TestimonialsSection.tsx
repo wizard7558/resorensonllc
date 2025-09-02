@@ -32,8 +32,8 @@ const TestimonialsSection = () => {
       content: 'Our lead scoring and routing automation reduced our sales cycle by 35% while improving lead quality. The ROI was immediate and continues to compound.',
       metrics: {
         icon: TrendingUp,
-        value: '$100M+',
-        label: 'Average Revenue Impact Generated'
+        value: '$8.3M',
+        label: 'Revenue Impact Generated'
       }
     }
   ];
