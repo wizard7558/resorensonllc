@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
       metrics: {
         icon: TrendingUp,
         value: '$100M+',
-        label: 'Revenue Impact Generated'
+        label: 'Average Revenue Impact Generated'
       }
     }
   ];
