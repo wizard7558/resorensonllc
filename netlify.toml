@@ -1,9 +1,9 @@
 [[redirects]]
   from = "/"
-  to = "/index.static.html"
+  to = "/seo.html"
   status = 200
   force = true
-  conditions = {User-Agent = ["*bot*", "*Bot*", "*Crawler*", "*Spider*"]}
+  conditions = {User-Agent = ["*bot*", "*Bot*", "*spider*", "*Spider*", "*crawler*", "*Crawler*", "Googlebot", "Bingbot", "Slurp", "DuckDuckBot", "Baiduspider", "YandexBot", "facebookexternalhit", "TwitterBot", "WhatsApp", "LinkedInBot", "Slack"]}
 
 [[redirects]]
   from = "/"
