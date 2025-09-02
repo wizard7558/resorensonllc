@@ -120,30 +120,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Credentials */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Credentials that modern businesses trust
-          </h2>
-          
-          <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 mb-8">
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Riley's professional certifications reflect a commitment to mastering the tools that power modern marketing:
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              {certifications.map((cert, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 flex-shrink-0" style={{ color: '#9D2235' }} />
-                  <span className="text-gray-700">{cert}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Growth Expertise */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
