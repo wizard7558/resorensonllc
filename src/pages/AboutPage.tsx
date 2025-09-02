@@ -59,8 +59,9 @@ const AboutPage = () => {
               The resilient center who transforms adversity into strategic growth
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Riley Sorenson brings a unique combination of data-driven marketing expertise, 
-              battle-tested leadership, and genuine human connection to growth-stage companies.
+            RESorenson LLC has served clients of all sizes and industries, generating
+            over $100M in new revenue across 85+ client engagements. Notable clients
+            include DoorDash, Rippling, Uber, Reddit, and Penn Interactive. 
             </p>
           </div>
 
@@ -75,17 +76,6 @@ const AboutPage = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Current Role */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-lg text-gray-600 leading-relaxed mb-8">
-            RESorenson LLC has served clients of all sizes and industries, generating
-            over $100M in new revenue across 85+ client engagements. Notable clients
-            include DoorDash, Rippling, Uber, Reddit, and Penn Interactive. 
-          </p>
         </div>
       </section>
 
@@ -151,44 +141,6 @@ const AboutPage = () => {
               ))}
             </div>
           </div>
-
-          <p className="text-gray-600 leading-relaxed">
-            At Fiat Growth, Riley contributes to a consultancy that positions itself as "strategic thinkers 
-            and proven operators" rather than a traditional agency. The firm's focus on data-driven growth 
-            strategies for venture-backed companies provides Riley with direct experience in the challenges 
-            facing scaling businesses – from Series A startups to pre-IPO growth stories.
-          </p>
-        </div>
-      </section>
-
-      {/* Leadership Through Adversity */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Leadership forged through unprecedented adversity
-          </h2>
-          
-          <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
-            <p className="text-gray-600 leading-relaxed mb-6">
-              What truly distinguishes Riley is his proven ability to lead through crisis and uncertainty. 
-              During his senior year at WSU, Riley faced challenges that would derail most careers: he lost 
-              his father to a heart attack in January 2016 and his mother to stage 4 melanoma just five months later. 
-              Days after his mother's funeral, he was diagnosed with testicular cancer.
-            </p>
-            
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Rather than stepping away, Riley demonstrated extraordinary mental toughness by playing every 
-              game of his senior season while undergoing treatment. He earned the <strong>Pac-12 Conference Sportsmanship Award</strong> and 
-              was nominated for the <strong>Capital One Orange Bowl-FWAA Courage Award</strong>.
-            </p>
-            
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <p className="text-gray-700 font-medium">
-                This experience of maintaining peak performance through personal crisis translates directly 
-                to helping businesses navigate their own challenges and transformations.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -224,77 +176,6 @@ const AboutPage = () => {
             product-market fit to established brands preparing for IPO. This breadth allows him to understand 
             the unique challenges at each phase of a company's journey.
           </p>
-        </div>
-      </section>
-
-      {/* Human Element */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-            The human element that younger businesses need
-          </h2>
-          
-          <p className="text-gray-600 leading-relaxed mb-8">
-            Beyond the analytics and certifications, Riley brings qualities that resonate with entrepreneurial teams:
-          </p>
-
-          <div className="space-y-6">
-            {[
-              {
-                title: 'Crisis Leadership',
-                description: 'Proven ability to maintain focus and drive results under extreme pressure'
-              },
-              {
-                title: 'Strategic Thinking', 
-                description: 'Economics training combined with real-world application in high-growth environments'
-              },
-              {
-                title: 'Genuine Connection',
-                description: 'Known for building trust through authentic relationships and thoughtful communication'
-              },
-              {
-                title: 'Teaching Mindset',
-                description: 'Natural ability to explain complex concepts and mentor others'
-              },
-              {
-                title: 'Resilience DNA',
-                description: 'Living proof that obstacles can become opportunities for growth'
-              }
-            ].map((quality, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                <h3 className="font-semibold text-gray-900 mb-2" style={{ color: '#9D2235' }}>
-                  {quality.title}
-                </h3>
-                <p className="text-gray-600">{quality.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
-            <p className="text-gray-600 leading-relaxed">
-              Colleagues describe Riley as someone who pauses to consider questions deeply before providing 
-              nuanced, thoughtful responses – a trait that serves clients well when navigating complex strategic 
-              decisions. His combination of analytical rigor and emotional intelligence creates a consulting 
-              approach that addresses both the spreadsheet and the human elements of business growth.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Conclusion */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-gray-50 to-red-50 p-8 rounded-lg border border-gray-200">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              A New Generation of Consultant
-            </h2>
-            <p className="text-gray-600 leading-relaxed text-center">
-              Riley Sorenson represents a new generation of consultant: data-fluent yet deeply human, 
-              analytically rigorous yet emotionally intelligent, battle-tested yet optimistic about growth potential. 
-              His journey from WSU's offensive line through personal tragedy to marketing analytics leadership 
-              demonstrates the resilience and adaptability that growing businesses need in their corner.
-            </p>
-          </div>
         </div>
       </section>
 
