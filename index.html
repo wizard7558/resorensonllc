@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/RES Icon Transparent.png" />
+    
+    <!-- Primary Meta Tags -->
+    <title>MarTech Consulting & Revenue Operations Expert | RESorenson LLC</title>
+    <meta name="description" content="Transform marketing chaos into revenue-driving systems. Strategic MarTech optimization, data infrastructure, and analytics implementation with proven 200-400% ROI improvements.">
+    <meta name="author" content="RESorenson LLC">
+    <meta name="theme-color" content="#9D2235">
+    <meta name="msapplication-TileColor" content="#9D2235">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://resorensonllc.com">
+    <meta property="og:title" content="MarTech Consulting & Revenue Operations Expert | RESorenson LLC">
+    <meta property="og:description" content="Transform marketing chaos into revenue-driving systems. Strategic MarTech optimization with proven 200-400% ROI improvements.">
+    <meta property="og:image" content="/RES Icon Transparent.png">
+    
+    <!-- Favicon variations -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/RES Icon Transparent.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/RES Icon Transparent.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/RES Icon Transparent.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://resorensonllc.com">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #9D2235 0%, #7a1a2a 100%);
+            color: white;
+            padding: 40px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            width: 60px;
+            height: 60px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .hero {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            color: #9D2235;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 800px;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .metric {
+            text-align: center;
+        }
+        
+        .metric-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #9D2235;
+        }
+        
+        .metric-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .services {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .services h2 {
+            font-size: 2rem;
+            color: #9D2235;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #9D2235;
+        }
+        
+        .service-card h3 {
+            color: #9D2235;
+            margin-bottom: 15px;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            color: #555;
+        }
+        
+        .service-card li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .service-card li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #9D2235;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #9D2235 0%, #7a1a2a 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #9D2235;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #9D2235;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            margin: 10px 0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <img src="/RES Icon Transparent.png" alt="RESorenson LLC Logo" class="logo">
+                <div>
+                    <h1>RESorenson LLC</h1>
+                    <p class="tagline">MarTech Consulting & Revenue Operations Expert</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h2>Transform Marketing Chaos Into Revenue-Driving Systems</h2>
+            <p>Strategic MarTech optimization, data infrastructure, and analytics implementation with proven results. We help B2B companies streamline their marketing technology stack, improve data flow, and maximize ROI on marketing investments.</p>
+            
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-number">200-400%</div>
+                    <div class="metric-label">ROI Improvements</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">50%</div>
+                    <div class="metric-label">Cost Reduction</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">3X</div>
+                    <div class="metric-label">Faster Implementation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="services">
+        <div class="container">
+            <h2>Strategic MarTech & Revenue Operations Services</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>MarTech Stack Optimization</h3>
+                    <ul>
+                        <li>Technology audits & roadmapping</li>
+                        <li>Platform selection & migration</li>
+                        <li>Integration architecture</li>
+                        <li>Cost optimization strategies</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Revenue Operations</h3>
+                    <ul>
+                        <li>Sales & marketing alignment</li>
+                        <li>Lead scoring & routing</li>
+                        <li>Pipeline acceleration</li>
+                        <li>Revenue attribution modeling</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Data & Analytics</h3>
+                    <ul>
+                        <li>Marketing analytics setup</li>
+                        <li>Custom dashboard creation</li>
+                        <li>Data governance frameworks</li>
+                        <li>Predictive analytics implementation</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>CRM & Automation</h3>
+                    <ul>
+                        <li>HubSpot implementation</li>
+                        <li>Salesforce optimization</li>
+                        <li>Marketing automation workflows</li>
+                        <li>Lead nurturing strategies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Optimize Your MarTech Stack?</h2>
+            <p>Let's transform your marketing technology into a revenue-driving machine.</p>
+            <div class="cta-buttons">
+                <a href="mailto:contact@resorensonllc.com" class="btn btn-primary">Start a Conversation</a>
+                <a href="/app.html" class="btn btn-secondary">View Interactive Dashboard</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 RESorenson LLC. All rights reserved.</p>
+            <p>Transforming MarTech chaos into revenue-driving systems.</p>
+            <p>contact@resorensonllc.com</p>
+        </div>
+    </footer>
+    
+    <!-- Hidden form for Netlify form detection -->
+    <form name="newsletter" netlify hidden>
+        <input type="email" name="email" />
+    </form>
+    
+    <!-- HubSpot Forms Script -->
+    <script src="https://js.hsforms.net/forms/embed/45832447.js" defer></script>
+</body>
+</html>
