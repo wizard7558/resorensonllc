@@ -3,6 +3,13 @@ import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { CheckCircle, AlertCircle, ArrowRight, BarChart3 } from 'lucide-react';
 
+// Declare gtag function for TypeScript
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
 const AssessmentPage = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -72,11 +79,30 @@ const AssessmentPage = () => {
   ];
 
   const handleAnswer = (value: string) => {
+    // Fire GTM data layer event
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'assessment_interaction',
+        assessment_step: currentStep + 1,
+        assessment_question: questions[currentStep].question,
+        assessment_answer: value,
+        button_text: questions[currentStep].options.find(opt => opt.value === value)?.label || value
+      });
+    }
+
     setAnswers({ ...answers, [questions[currentStep].id]: value });
     
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
+      // Fire completion event
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          event: 'assessment_completed',
+          assessment_score: calculateScore(),
+          total_steps: questions.length
+        });
+      }
       setShowResults(true);
     }
   };
