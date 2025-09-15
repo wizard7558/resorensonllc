@@ -24,6 +24,38 @@ const LandingPage = () => {
         }
       };
     }
+
+    // Load Calendly routing form integration
+    if (!document.querySelector('link[href="https://assets.calendly.com/assets/external/widget.css"]')) {
+      const link = document.createElement('link');
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    }
+
+    if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/forms.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/forms.js';
+      script.type = 'text/javascript';
+      script.async = true;
+      document.body.appendChild(script);
+
+      script.onload = () => {
+        window.addEventListener('load', function() {
+          if (window.Calendly) {
+            window.Calendly.initHubspotForm({
+              "id": "4474bab3-e337-4e40-ae85-a41d4c3ceed6",
+              "url": "https://calendly.com/api/form_builder/forms/74fe6ff2-23ec-4c52-bbf9-0d74ca76aabb/submissions",
+              "options": {
+                "hide_event_type_details": 1,
+                "hide_gdpr_banner": 1,
+                "primary_color": "9d2235"
+              }
+            });
+          }
+        });
+      };
+    }
   }, []);
 
   const benefits = [
