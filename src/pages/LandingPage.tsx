@@ -49,7 +49,8 @@ const LandingPage = () => {
               "options": {
                 "hide_event_type_details": 1,
                 "hide_gdpr_banner": 1,
-                "primary_color": "9d2235"
+                "primary_color": "9d2235",
+                "parentElement": "#hubspot-lead-form"
               }
             });
           }
@@ -137,21 +138,21 @@ const LandingPage = () => {
             <div className="bg-white p-8 rounded-lg border-2 shadow-lg" style={{ borderColor: '#9D2235' }}>
               <div className="text-center mb-6">
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                  Get Your Free MarTech Assessment
+                  Schedule Your Free MarTech Assessment
                 </h2>
                 <p className="text-gray-600">
-                  Discover exactly how to increase your qualified leads by 200-400%
+                  Book a 30-minute consultation to analyze your MarTech stack
                 </p>
               </div>
 
               {/* HubSpot Form */}
-              <div id="hubspot-lead-form"></div>
+              <div id="hubspot-lead-form" className="min-h-[400px]"></div>
 
               {/* Trust Indicators */}
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
                   <CheckCircle className="h-4 w-4 text-green-400" />
-                  <span>100% Free • No Spam • Instant Results</span>
+                  <span>30-minute call • Instant booking • No obligations</span>
                 </div>
               </div>
             </div>
@@ -164,22 +165,46 @@ const LandingPage = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Join 85+ Companies That Transformed Their MarTech
+              What You'll Get in Your Free Assessment Call
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4 italic">"{testimonial.quote}"</p>
-                <div className="text-gray-500 text-sm">— {testimonial.author}</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#9D2235' }}>
+                <Target className="h-8 w-8 text-white" />
               </div>
-            ))}
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Live MarTech Stack Review
+              </h3>
+              <p className="text-gray-600">
+                We'll analyze your current tools and identify immediate optimization opportunities.
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#9D2235' }}>
+                <TrendingUp className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Custom ROI Projections
+              </h3>
+              <p className="text-gray-600">
+                Get specific revenue impact estimates based on your current metrics and goals.
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#9D2235' }}>
+                <Users className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Actionable Next Steps
+              </h3>
+              <p className="text-gray-600">
+                Leave with a clear roadmap for immediate wins and long-term optimization.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -237,11 +262,11 @@ const LandingPage = () => {
       <section className="py-16" style={{ background: 'linear-gradient(to right, #9D2235, #374151)' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Stop Losing Qualified Leads?
+            Ready to Schedule Your Free Assessment?
           </h2>
           <p className="text-xl text-red-100 mb-8">
-            Join the 85+ companies that have transformed their MarTech stack and 
-            generated over $100M in additional revenue.
+            Book your 30-minute MarTech assessment call and discover exactly 
+            how to increase your qualified leads by 200-400%.
           </p>
           
           <a
@@ -254,11 +279,12 @@ const LandingPage = () => {
             }}
           >
             <span>Get Your Free Assessment</span>
+            <span>Schedule Your Assessment Call</span>
             <ArrowRight size={20} />
           </a>
           
           <p className="text-red-100 text-sm mt-4">
-            Instant results • No spam • 100% free
+            30-minute call • Instant booking • No obligations
           </p>
         </div>
       </section>
