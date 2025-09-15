@@ -5,21 +5,23 @@ import { CheckCircle, TrendingUp, Clock, Users, ArrowRight, Star, Target } from 
 const LandingPage = () => {
   // HubSpot form embed
   useEffect(() => {
-    // Load HubSpot script if not already present
-    if (!document.querySelector('script[src="https://js.hsforms.net/forms/embed/45832447.js"]')) {
+    // Load HubSpot v2 script if not already present
+    if (!document.querySelector('script[src="//js.hsforms.net/forms/embed/v2.js"]')) {
       const script = document.createElement('script');
-      script.src = 'https://js.hsforms.net/forms/embed/45832447.js';
+      script.src = '//js.hsforms.net/forms/embed/v2.js';
+      script.charset = 'utf-8';
+      script.type = 'text/javascript';
       script.defer = true;
       document.body.appendChild(script);
     }
 
-    // Create the form once script is loaded
+    // Create the specific form once script is loaded
     const createForm = () => {
       if (window.hbspt) {
         window.hbspt.forms.create({
-          region: "na1",
           portalId: "45832447",
-          formId: "43badb32-d497-44b9-b1eb-ae894de45952",
+          formId: "4474bab3-e337-4e40-ae85-a41d4c3ceed6",
+          region: "na1",
           target: "#hubspot-lead-form"
         });
       } else {
