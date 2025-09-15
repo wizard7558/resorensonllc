@@ -3,33 +3,15 @@ import SEO from '../components/SEO';
 import { CheckCircle, TrendingUp, Clock, Users, ArrowRight, Star, Target } from 'lucide-react';
 
 const LandingPage = () => {
-  // HubSpot form embed
+  // HubSpot meetings embed
   useEffect(() => {
-    // Load HubSpot v2 script if not already present
-    if (!document.querySelector('script[src="//js.hsforms.net/forms/embed/v2.js"]')) {
+    // Load HubSpot meetings embed script if not already present
+    if (!document.querySelector('script[src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"]')) {
       const script = document.createElement('script');
-      script.src = '//js.hsforms.net/forms/embed/v2.js';
-      script.charset = 'utf-8';
+      script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
       script.type = 'text/javascript';
-      script.defer = true;
       document.body.appendChild(script);
     }
-
-    // Create the specific form once script is loaded
-    const createForm = () => {
-      if (window.hbspt) {
-        window.hbspt.forms.create({
-          portalId: "45832447",
-          formId: "4474bab3-e337-4e40-ae85-a41d4c3ceed6",
-          region: "na1",
-          target: "#hubspot-lead-form"
-        });
-      } else {
-        setTimeout(createForm, 100);
-      }
-    };
-
-    createForm();
   }, []);
 
   const benefits = [
@@ -111,21 +93,21 @@ const LandingPage = () => {
             <div className="bg-white p-8 rounded-lg border-2 shadow-lg" style={{ borderColor: '#9D2235' }}>
               <div className="text-center mb-6">
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                  Get Your Free Assessment
+                  Schedule Your Free Consultation
                 </h2>
                 <p className="text-gray-600">
-                  Discover your optimization opportunities in under 2 minutes
+                  Book a 30-minute strategy call to discuss your MarTech challenges
                 </p>
               </div>
 
-              {/* HubSpot Form Container */}
-              <div id="hubspot-lead-form" className="min-h-[300px]"></div>
+              {/* HubSpot Meetings Embed */}
+              <div className="meetings-iframe-container" data-src="https://meetings.hubspot.com/resorensonllc/martech-consultation-riley-sorenson?embed=true"></div>
 
               {/* Trust Indicators */}
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
                   <CheckCircle className="h-4 w-4 text-green-400" />
-                  <span>100% Free • No Spam • Instant Results</span>
+                  <span>100% Free • 30 Minutes • No Obligations</span>
                 </div>
               </div>
             </div>
@@ -163,7 +145,7 @@ const LandingPage = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              What You'll Get in Your Free Assessment
+              What You'll Get in Your Free Consultation
             </h2>
           </div>
 
@@ -173,10 +155,10 @@ const LandingPage = () => {
                 <Target className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                MarTech Stack Analysis
+                Live MarTech Stack Review
               </h3>
               <p className="text-gray-600">
-                Comprehensive review of your current tools and integrations with specific optimization recommendations.
+                We'll review your current tools and integrations live during the call with specific optimization recommendations.
               </p>
             </div>
 
@@ -185,10 +167,10 @@ const LandingPage = () => {
                 <TrendingUp className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                ROI Projections
+                Custom ROI Projections
               </h3>
               <p className="text-gray-600">
-                Detailed projections showing potential revenue impact and timeline for improvements.
+                Get detailed projections showing potential revenue impact and timeline for improvements based on your specific situation.
               </p>
             </div>
 
@@ -197,10 +179,10 @@ const LandingPage = () => {
                 <Users className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                30-Min Strategy Call
+                Actionable Next Steps
               </h3>
               <p className="text-gray-600">
-                Personal consultation to discuss your results and create an action plan for immediate wins.
+                Walk away with a clear action plan for immediate wins and long-term MarTech optimization strategy.
               </p>
             </div>
           </div>
@@ -219,20 +201,20 @@ const LandingPage = () => {
           </p>
           
           <a
-            href="#hubspot-lead-form"
+            href="#meetings-embed"
             className="inline-flex items-center space-x-2 bg-white hover:bg-gray-50 px-8 py-4 rounded-lg font-semibold transition-colors text-lg"
             style={{ color: '#9D2235' }}
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById('hubspot-lead-form')?.scrollIntoView({ behavior: 'smooth' });
+              document.querySelector('.meetings-iframe-container')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            <span>Get Your Free Assessment Now</span>
+            <span>Schedule Your Free Consultation</span>
             <ArrowRight size={20} />
           </a>
           
           <p className="text-red-100 text-sm mt-4">
-            Takes less than 2 minutes • Results delivered instantly
+            30-minute call • Immediate insights • No obligations
           </p>
         </div>
       </section>
