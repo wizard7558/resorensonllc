@@ -3,14 +3,26 @@ import SEO from '../components/SEO';
 import { CheckCircle, TrendingUp, Clock, Users, ArrowRight, Star, Target } from 'lucide-react';
 
 const LandingPage = () => {
-  // HubSpot meetings embed
+  // HubSpot form embed
   useEffect(() => {
-    // Load HubSpot meetings embed script if not already present
-    if (!document.querySelector('script[src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"]')) {
+    // Load HubSpot forms embed script if not already present
+    if (!document.querySelector('script[src="//js.hsforms.net/forms/embed/v2.js"]')) {
       const script = document.createElement('script');
-      script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
+      script.src = '//js.hsforms.net/forms/embed/v2.js';
+      script.charset = 'utf-8';
       script.type = 'text/javascript';
       document.body.appendChild(script);
+      
+      script.onload = () => {
+        if (window.hbspt) {
+          window.hbspt.forms.create({
+            portalId: "45832447",
+            formId: "4474bab3-e337-4e40-ae85-a41d4c3ceed6",
+            region: "na1",
+            target: "#hubspot-lead-form"
+          });
+        }
+      };
     }
   }, []);
 
@@ -93,21 +105,21 @@ const LandingPage = () => {
             <div className="bg-white p-8 rounded-lg border-2 shadow-lg" style={{ borderColor: '#9D2235' }}>
               <div className="text-center mb-6">
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                  Schedule Your Free Consultation
+                  Get Your Free MarTech Assessment
                 </h2>
                 <p className="text-gray-600">
-                  Book a 30-minute strategy call to discuss your MarTech challenges
+                  Discover exactly how to increase your qualified leads by 200-400%
                 </p>
               </div>
 
-              {/* HubSpot Meetings Embed */}
-              <div className="meetings-iframe-container" data-src="https://meetings.hubspot.com/resorensonllc/martech-consultation-riley-sorenson?embed=true"></div>
+              {/* HubSpot Form */}
+              <div id="hubspot-lead-form"></div>
 
               {/* Trust Indicators */}
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
                   <CheckCircle className="h-4 w-4 text-green-400" />
-                  <span>100% Free • 30 Minutes • No Obligations</span>
+                  <span>100% Free • No Spam • Instant Results</span>
                 </div>
               </div>
             </div>
@@ -155,10 +167,10 @@ const LandingPage = () => {
                 <Target className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Live MarTech Stack Review
+                Instant MarTech Analysis
               </h3>
               <p className="text-gray-600">
-                We'll review your current tools and integrations live during the call with specific optimization recommendations.
+                Get immediate insights into your current MarTech stack with specific optimization recommendations.
               </p>
             </div>
 
@@ -167,10 +179,10 @@ const LandingPage = () => {
                 <TrendingUp className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Custom ROI Projections
+                Personalized ROI Report
               </h3>
               <p className="text-gray-600">
-                Get detailed projections showing potential revenue impact and timeline for improvements based on your specific situation.
+                Receive detailed projections showing potential revenue impact and timeline for improvements.
               </p>
             </div>
 
@@ -179,10 +191,10 @@ const LandingPage = () => {
                 <Users className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Actionable Next Steps
+                Implementation Roadmap
               </h3>
               <p className="text-gray-600">
-                Walk away with a clear action plan for immediate wins and long-term MarTech optimization strategy.
+                Get a clear action plan for immediate wins and long-term MarTech optimization strategy.
               </p>
             </div>
           </div>
@@ -201,20 +213,20 @@ const LandingPage = () => {
           </p>
           
           <a
-            href="#meetings-embed"
+            href="#hubspot-lead-form"
             className="inline-flex items-center space-x-2 bg-white hover:bg-gray-50 px-8 py-4 rounded-lg font-semibold transition-colors text-lg"
             style={{ color: '#9D2235' }}
             onClick={(e) => {
               e.preventDefault();
-              document.querySelector('.meetings-iframe-container')?.scrollIntoView({ behavior: 'smooth' });
+              document.querySelector('#hubspot-lead-form')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            <span>Schedule Your Free Consultation</span>
+            <span>Get Your Free Assessment</span>
             <ArrowRight size={20} />
           </a>
           
           <p className="text-red-100 text-sm mt-4">
-            30-minute call • Immediate insights • No obligations
+            Instant results • No spam • 100% free
           </p>
         </div>
       </section>
