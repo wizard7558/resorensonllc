@@ -106,7 +106,7 @@ const LandingPage = () => {
                 
                 <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
                   Get a free assessment of your marketing technology stack and discover 
-                  exactly how to increase qualified leads by 200-400%.
+                  exactly how to measure your marketing success.
                 </p>
               </div>
 
