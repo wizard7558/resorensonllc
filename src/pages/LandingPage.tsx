@@ -60,10 +60,9 @@ const LandingPage = () => {
   }, []);
 
   const benefits = [
-    'Increase qualified leads by 200-400%',
-    'Reduce manual data entry by 85%',
-    'Improve marketing/sales alignment',
-    'Get complete ROI visibility'
+    'Gain full-funnel visibility',
+    'Understand actual ROI',
+    'Improve marketing/sales alignment'
   ];
 
   const socialProof = [
