@@ -227,8 +227,7 @@ const LandingPage = () => {
             Ready to Schedule Your Free Assessment?
           </h2>
           <p className="text-lg sm:text-xl text-red-100 mb-6 sm:mb-8">
-            Book your 30-minute MarTech assessment call and discover exactly 
-            how to increase your qualified leads by 200-400%.
+            Bring clarity to your Marketing Operations. 
           </p>
           
           <a
