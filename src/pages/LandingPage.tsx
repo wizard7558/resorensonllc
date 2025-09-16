@@ -136,10 +136,22 @@ const LandingPage = () => {
 
             {/* Mobile: Form First, Desktop: Form Second */}
             <div className="order-1 lg:order-2 bg-white p-6 sm:p-8 rounded-lg border-2 shadow-lg" style={{ borderColor: '#9D2235' }}>
-              <div className="text-center mb-6">
-                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
-                  Schedule Your Free MarTech Assessment
+              {/* New headline above form */}
+              <div className="text-center mb-6 sm:mb-8">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                  Stop Losing Qualified Leads in Your{' '}
+                  <span style={{ color: '#9D2235' }}>MarTech Chaos</span>
                 </h2>
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                  Get a free assessment of your marketing technology stack and discover 
+                  exactly how to increase qualified leads by 200-400%.
+                </p>
+              </div>
+              
+              <div className="text-center mb-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
+                  Schedule Your Free MarTech Assessment
+                </h3>
                 <p className="text-sm sm:text-base text-gray-600">
                   Book a 30-minute consultation to analyze your MarTech stack
                 </p>
