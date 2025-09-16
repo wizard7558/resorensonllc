@@ -96,8 +96,9 @@ const LandingPage = () => {
       <section className="py-12 bg-gradient-to-br from-gray-50 via-white to-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            {/* Mobile: Form First, Desktop: Content First */}
+            {/* Content Column - Desktop: First, Mobile: Second */}
             <div className="order-2 lg:order-1 space-y-6 lg:space-y-8">
+              {/* Desktop-only headline */}
               <div className="space-y-6 hidden lg:block">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                   Stop Losing Qualified Leads in Your{' '}
@@ -133,16 +134,17 @@ const LandingPage = () => {
               </div>
             </div>
 
-            {/* Mobile: Form First, Desktop: Form Second */}
+            {/* Form Column - Desktop: Second, Mobile: First */}
             <div className="order-1 lg:order-2 bg-white p-6 sm:p-8 rounded-lg border-2 shadow-lg" style={{ borderColor: '#9D2235' }}>
-              {/* Mobile-only headline above form */}
+              {/* Mobile/tablet-only headline above form */}
               <div className="text-center mb-6 sm:mb-8 lg:hidden">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
                   Stop Losing Qualified Leads in Your{' '}
                   <span style={{ color: '#9D2235' }}>MarTech Chaos</span>
                 </h2>
                 <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                  Get a free assessment of your marketing technology stack and discover exactly how to measure your marketing success.
+                  Get a free assessment of your marketing technology stack and discover 
+                  exactly how to measure your marketing success.
                 </p>
               </div>
               
