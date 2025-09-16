@@ -86,7 +86,7 @@ const LandingPage = () => {
     <div className="min-h-screen bg-white">
       <SEO
         title="Free MarTech Assessment - Transform Your Marketing Stack | RESorenson LLC"
-        description="Get a free MarTech stack assessment and discover how to increase qualified leads by 200-400%. Trusted by 85+ companies with $100M+ in revenue impact."
+        description="Get a free assessment of your marketing technology stack and discover exactly how to measure your marketing success%. Trusted by 85+ companies with $100M+ in revenue impact."
         keywords="free martech assessment, marketing technology audit, increase qualified leads, martech optimization, hubspot consultant"
         canonicalUrl="/landing"
         noIndex={true}
@@ -143,7 +143,7 @@ const LandingPage = () => {
                 </h2>
                 <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                   Get a free assessment of your marketing technology stack and discover 
-                  exactly how to increase qualified leads by 200-400%.
+                  exactly how to measure your marketing success.
                 </p>
               </div>
               
