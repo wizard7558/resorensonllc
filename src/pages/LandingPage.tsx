@@ -96,16 +96,16 @@ const LandingPage = () => {
       {/* Hero Section */}
       <section className="py-12 bg-gradient-to-br from-gray-50 via-white to-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Headline & Benefits */}
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* Mobile: Form First, Desktop: Content First */}
+            <div className="order-2 lg:order-1 space-y-6 lg:space-y-8">
               <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                   Stop Losing Qualified Leads in Your{' '}
                   <span style={{ color: '#9D2235' }}>MarTech Chaos</span>
                 </h1>
                 
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
                   Get a free assessment of your marketing technology stack and discover 
                   exactly how to increase qualified leads by 200-400%.
                 </p>
@@ -122,25 +122,25 @@ const LandingPage = () => {
               </div>
 
               {/* Social Proof Metrics */}
-              <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-6 border-t border-gray-200">
                 {socialProof.map((item, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-2xl font-bold" style={{ color: '#9D2235' }}>
+                    <div className="text-lg sm:text-2xl font-bold" style={{ color: '#9D2235' }}>
                       {item.metric}
                     </div>
-                    <div className="text-sm text-gray-600">{item.label}</div>
+                    <div className="text-xs sm:text-sm text-gray-600">{item.label}</div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Right Column - Lead Form */}
-            <div className="bg-white p-8 rounded-lg border-2 shadow-lg" style={{ borderColor: '#9D2235' }}>
+            {/* Mobile: Form First, Desktop: Form Second */}
+            <div className="order-1 lg:order-2 bg-white p-6 sm:p-8 rounded-lg border-2 shadow-lg" style={{ borderColor: '#9D2235' }}>
               <div className="text-center mb-6">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                   Schedule Your Free MarTech Assessment
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-sm sm:text-base text-gray-600">
                   Book a 30-minute consultation to analyze your MarTech stack
                 </p>
               </div>
@@ -163,45 +163,45 @@ const LandingPage = () => {
       {/* Testimonials Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               What You'll Get in Your Free Assessment Call
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="text-center p-4 sm:p-6">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#9D2235' }}>
                 <Target className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
                 Live MarTech Stack Review
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 We'll analyze your current tools and identify immediate optimization opportunities.
               </p>
             </div>
 
-            <div className="text-center p-6">
+            <div className="text-center p-4 sm:p-6">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#9D2235' }}>
                 <TrendingUp className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
                 Custom ROI Projections
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Get specific revenue impact estimates based on your current metrics and goals.
               </p>
             </div>
 
-            <div className="text-center p-6">
+            <div className="text-center p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#9D2235' }}>
                 <Users className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
                 Actionable Next Steps
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Leave with a clear roadmap for immediate wins and long-term optimization.
               </p>
             </div>
@@ -212,45 +212,45 @@ const LandingPage = () => {
       {/* What You'll Get Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               What You'll Get in Your Free Consultation
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="text-center p-4 sm:p-6">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#9D2235' }}>
                 <Target className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
                 Instant MarTech Analysis
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Get immediate insights into your current MarTech stack with specific optimization recommendations.
               </p>
             </div>
 
-            <div className="text-center p-6">
+            <div className="text-center p-4 sm:p-6">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#9D2235' }}>
                 <TrendingUp className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
                 Personalized ROI Report
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Receive detailed projections showing potential revenue impact and timeline for improvements.
               </p>
             </div>
 
-            <div className="text-center p-6">
+            <div className="text-center p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#9D2235' }}>
                 <Users className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
                 Implementation Roadmap
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Get a clear action plan for immediate wins and long-term MarTech optimization strategy.
               </p>
             </div>
@@ -261,29 +261,28 @@ const LandingPage = () => {
       {/* Final CTA Section */}
       <section className="py-16" style={{ background: 'linear-gradient(to right, #9D2235, #374151)' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
             Ready to Schedule Your Free Assessment?
           </h2>
-          <p className="text-xl text-red-100 mb-8">
+          <p className="text-lg sm:text-xl text-red-100 mb-6 sm:mb-8">
             Book your 30-minute MarTech assessment call and discover exactly 
             how to increase your qualified leads by 200-400%.
           </p>
           
           <a
             href="#hubspot-lead-form"
-            className="inline-flex items-center space-x-2 bg-white hover:bg-gray-50 px-8 py-4 rounded-lg font-semibold transition-colors text-lg"
+            className="inline-flex items-center space-x-2 bg-white hover:bg-gray-50 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-colors text-base sm:text-lg"
             style={{ color: '#9D2235' }}
             onClick={(e) => {
               e.preventDefault();
               document.querySelector('#hubspot-lead-form')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            <span>Get Your Free Assessment</span>
             <span>Schedule Your Assessment Call</span>
             <ArrowRight size={20} />
           </a>
           
-          <p className="text-red-100 text-sm mt-4">
+          <p className="text-red-100 text-xs sm:text-sm mt-4">
             30-minute call • Instant booking • No obligations
           </p>
         </div>
