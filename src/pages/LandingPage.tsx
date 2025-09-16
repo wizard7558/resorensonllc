@@ -98,7 +98,7 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Mobile: Form First, Desktop: Content First */}
             <div className="order-2 lg:order-1 space-y-6 lg:space-y-8">
-              <div className="space-y-6">
+              <div className="space-y-6 hidden lg:block">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                   Stop Losing Qualified Leads in Your{' '}
                   <span style={{ color: '#9D2235' }}>MarTech Chaos</span>
