@@ -135,15 +135,14 @@ const LandingPage = () => {
 
             {/* Mobile: Form First, Desktop: Form Second */}
             <div className="order-1 lg:order-2 bg-white p-6 sm:p-8 rounded-lg border-2 shadow-lg" style={{ borderColor: '#9D2235' }}>
-              {/* New headline above form */}
-              <div className="text-center mb-6 sm:mb-8">
+              {/* Mobile-only headline above form */}
+              <div className="text-center mb-6 sm:mb-8 lg:hidden">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
                   Stop Losing Qualified Leads in Your{' '}
                   <span style={{ color: '#9D2235' }}>MarTech Chaos</span>
                 </h2>
                 <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                  Get a free assessment of your marketing technology stack and discover 
-                  exactly how to measure your marketing success.
+                  Get a free assessment of your marketing technology stack and discover exactly how to measure your marketing success.
                 </p>
               </div>
               
