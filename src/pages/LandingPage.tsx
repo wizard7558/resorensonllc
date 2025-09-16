@@ -220,55 +220,6 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* What You'll Get Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              What You'll Get in Your Free Consultation
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <div className="text-center p-4 sm:p-6">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#9D2235' }}>
-                <Target className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
-                Instant MarTech Analysis
-              </h3>
-              <p className="text-sm sm:text-base text-gray-600">
-                Get immediate insights into your current MarTech stack with specific optimization recommendations.
-              </p>
-            </div>
-
-            <div className="text-center p-4 sm:p-6">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#9D2235' }}>
-                <TrendingUp className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
-                Personalized ROI Report
-              </h3>
-              <p className="text-sm sm:text-base text-gray-600">
-                Receive detailed projections showing potential revenue impact and timeline for improvements.
-              </p>
-            </div>
-
-            <div className="text-center p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#9D2235' }}>
-                <Users className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
-                Implementation Roadmap
-              </h3>
-              <p className="text-sm sm:text-base text-gray-600">
-                Get a clear action plan for immediate wins and long-term MarTech optimization strategy.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA Section */}
       <section className="py-16" style={{ background: 'linear-gradient(to right, #9D2235, #374151)' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
