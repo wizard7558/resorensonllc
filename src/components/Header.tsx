@@ -23,7 +23,7 @@ const Header = () => {
             <img
               src="/lattara-logo-black.svg"
               alt="Lattara Logo"
-              className="h-10 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
           </Link>
 
