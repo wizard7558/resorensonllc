@@ -22,7 +22,7 @@ export const organizationSchema = {
     "addressCountry": "US"
   },
   "sameAs": [
-    "https://www.linkedin.com/company/lattara"
+    "https://www.linkedin.com/in/rsorensondata/"
   ],
   "serviceArea": {
     "@type": "Place",

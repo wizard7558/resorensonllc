@@ -21,7 +21,7 @@ const Footer = () => {
               MarTech optimization, data infrastructure, and analytics implementation.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
+              <a href="https://www.linkedin.com/in/rsorensondata/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-400 transition-colors">
                 <Linkedin size={20} />
               </a>
               <a href="mailto:riley@lattara.com" className="text-gray-400 hover:text-red-400 transition-colors">
