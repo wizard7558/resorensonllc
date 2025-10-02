@@ -1,4 +1,16 @@
 [[redirects]]
+  from = "https://resorensonllc.com/*"
+  to = "https://lattara.co/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://resorensonllc.com/*"
+  to = "https://lattara.co/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/"
   to = "/seo.html"
   status = 200
