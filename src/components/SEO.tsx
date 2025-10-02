@@ -22,8 +22,8 @@ const SEO: React.FC<SEOProps> = ({
   structuredData,
   noIndex = false
 }) => {
-  const siteUrl = 'https://resorensonllc.com';
-  const fullTitle = title.includes('RESorenson') ? title : `${title} | RESorenson LLC`;
+  const siteUrl = 'https://lattara.com';
+  const fullTitle = title.includes('Lattara') ? title : `${title} | Lattara`;
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 
@@ -33,7 +33,7 @@ const SEO: React.FC<SEOProps> = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="author" content="RESorenson LLC" />
+      <meta name="author" content="Lattara" />
       <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
       
       {/* Canonical URL */}
@@ -45,7 +45,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullCanonicalUrl} />
       <meta property="og:image" content={fullOgImage} />
-      <meta property="og:site_name" content="RESorenson LLC" />
+      <meta property="og:site_name" content="Lattara" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Tags */}

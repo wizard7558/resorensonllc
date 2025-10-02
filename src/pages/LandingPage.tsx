@@ -85,7 +85,7 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Free MarTech Assessment - Transform Your Marketing Stack | RESorenson LLC"
+        title="Free MarTech Assessment - Transform Your Marketing Stack | Lattara"
         description="Get a free assessment of your marketing technology stack and discover exactly how to measure your marketing success%. Trusted by 85+ companies with $100M+ in revenue impact."
         keywords="free martech assessment, marketing technology audit, increase qualified leads, martech optimization, hubspot consultant"
         canonicalUrl="/landing"

@@ -2,9 +2,9 @@
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "RESorenson LLC",
-  "url": "https://resorensonllc.com",
-  "logo": "https://resorensonllc.com/RES Icon Transparent.png",
+  "name": "Lattara",
+  "url": "https://lattara.com",
+  "logo": "https://lattara.com/RES Icon Transparent.png",
   "description": "Strategic MarTech consulting, data infrastructure design, and analytics implementation that delivers measurable business outcomes.",
   "founder": {
     "@type": "Person",
@@ -14,7 +14,7 @@ export const organizationSchema = {
     "@type": "ContactPoint",
     "telephone": "+1-949-632-7363",
     "contactType": "customer service",
-    "email": "riley@resorensonllc.com",
+    "email": "riley@lattara.com",
     "availableLanguage": "English"
   },
   "address": {
@@ -22,7 +22,7 @@ export const organizationSchema = {
     "addressCountry": "US"
   },
   "sameAs": [
-    "https://www.linkedin.com/company/resorensonllc"
+    "https://www.linkedin.com/company/lattara"
   ],
   "serviceArea": {
     "@type": "Place",
@@ -34,12 +34,12 @@ export const organizationSchema = {
 export const professionalServiceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "RESorenson LLC",
-  "image": "https://resorensonllc.com/RES Icon Transparent.png",
+  "name": "Lattara",
+  "image": "https://lattara.com/RES Icon Transparent.png",
   "description": "Strategic MarTech optimization, data infrastructure, and revenue operations consulting services.",
   "provider": {
     "@type": "Organization",
-    "name": "RESorenson LLC"
+    "name": "Lattara"
   },
   "areaServed": "Global",
   "hasOfferCatalog": {
@@ -109,17 +109,17 @@ export const generateArticleSchema = (article: {
   "@type": "Article",
   "headline": article.title,
   "description": article.description,
-  "image": article.image || "https://resorensonllc.com/RES Icon Transparent.png",
+  "image": article.image || "https://lattara.com/RES Icon Transparent.png",
   "author": {
     "@type": "Person",
     "name": article.author || "Riley Sorenson"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "RESorenson LLC",
+    "name": "Lattara",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://resorensonllc.com/RES Icon Transparent.png"
+      "url": "https://lattara.com/RES Icon Transparent.png"
     }
   },
   "datePublished": article.datePublished,
@@ -135,7 +135,7 @@ export const generateReviewSchema = (reviews: Array<{
 }>) => ({
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "RESorenson LLC",
+  "name": "Lattara",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length,

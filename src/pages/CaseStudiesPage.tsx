@@ -20,7 +20,7 @@ const CaseStudiesPage = () => {
       ],
       techStack: ['HubSpot', 'Salesforce', 'Zapier', 'Google Analytics', 'Looker'],
       testimonial: {
-        quote: 'RESorenson transformed our chaotic MarTech stack into a revenue-generating machine. The results speak for themselves.',
+        quote: 'Lattara transformed our chaotic MarTech stack into a revenue-generating machine. The results speak for themselves.',
         author: 'Sarah Chen, VP of Marketing'
       }
     },

@@ -63,9 +63,8 @@ const ROICounter = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {statItems.map((item, index) => (
-            <div 
+            <div
               key={index}
-              className="text-center bg-slate-800/50 backdrop-blur-sm p-8 rounded-lg border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
               className="text-center bg-white p-8 rounded-lg border border-gray-200 hover:border-red-500 shadow-sm hover:shadow-md transition-all duration-300"
             >
               <div className="flex justify-center mb-4">

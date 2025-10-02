@@ -58,9 +58,9 @@ const AboutPage = () => {
               The resilient center who transforms adversity into strategic growth
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            RESorenson LLC has served clients of all sizes and industries, generating
+            Lattara has served clients of all sizes and industries, generating
             over $100M in new revenue across 85+ client engagements. Notable clients
-            include DoorDash, Rippling, Uber, Reddit, and Penn Interactive. 
+            include DoorDash, Rippling, Uber, Reddit, and Penn Interactive.
             </p>
           </div>
 

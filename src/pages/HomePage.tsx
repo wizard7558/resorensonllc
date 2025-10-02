@@ -14,7 +14,7 @@ const HomePage = () => {
     {
       author: "Sarah Chen",
       rating: 5,
-      reviewBody: "RESorenson transformed our chaotic MarTech stack into a revenue-generating machine. Our MQL-to-SQL conversion rate jumped from 12% to 41% in just 4 months. Part of over $100M in revenue impact generated.",
+      reviewBody: "Lattara transformed our chaotic MarTech stack into a revenue-generating machine. Our MQL-to-SQL conversion rate jumped from 12% to 41% in just 4 months. Part of over $100M in revenue impact generated.",
       datePublished: "2024-12-15"
     },
     {

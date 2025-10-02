@@ -26,7 +26,7 @@ const ContactPage = () => {
     <div className="min-h-screen bg-white">
       <SEO
         title="Contact MarTech Consultant | Free Assessment Available"
-        description="Get expert MarTech consulting help. Free 30-minute assessment, personalized optimization roadmap, and ROI projections. Contact RESorenson LLC today."
+        description="Get expert MarTech consulting help. Free 30-minute assessment, personalized optimization roadmap, and ROI projections. Contact Lattara today."
         keywords="martech consultant contact, free martech assessment, hubspot consultant, salesforce integration help, revenue operations consulting"
         canonicalUrl="/contact"
         ogType="website"
@@ -71,7 +71,7 @@ const ContactPage = () => {
                   <Mail className="h-6 w-6 mt-1" style={{ color: '#9D2235' }} />
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">riley@resorensonllc.com</p>
+                    <p className="text-gray-600">riley@lattara.com</p>
                     <p className="text-gray-500 text-sm">We typically respond within 4 hours</p>
                   </div>
                 </div>

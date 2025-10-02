@@ -20,12 +20,12 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <img 
-              src="/RES Icon Transparent.png" 
-              alt="RESorenson LLC Logo" 
+            <img
+              src="/RES Icon Transparent.png"
+              alt="Lattara Logo"
               className="h-8 w-8 object-contain"
             />
-            <span className="text-xl font-bold text-gray-900">RESorenson LLC</span>
+            <span className="text-xl font-bold text-gray-900">Lattara</span>
           </Link>
 
           <nav className="hidden md:flex space-x-8">

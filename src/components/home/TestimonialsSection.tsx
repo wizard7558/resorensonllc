@@ -7,7 +7,7 @@ const TestimonialsSection = () => {
       name: 'Sarah Chen',
       title: 'VP of Marketing',
       company: 'TechFlow Solutions',
-      content: 'RESorenson transformed our chaotic MarTech stack into a revenue-generating machine. Our MQL-to-SQL conversion rate jumped from 12% to 41% in just 4 months.',
+      content: 'Lattara transformed our chaotic MarTech stack into a revenue-generating machine. Our MQL-to-SQL conversion rate jumped from 12% to 41% in just 4 months.',
       metrics: {
         icon: TrendingUp,
         value: '4.1x',

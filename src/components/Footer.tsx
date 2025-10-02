@@ -9,12 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <img 
-                src="/RES Icon Transparent.png" 
-                alt="RESorenson LLC Logo" 
+              <img
+                src="/RES Icon Transparent.png"
+                alt="Lattara Logo"
                 className="h-8 w-8 object-contain"
               />
-              <span className="text-xl font-bold text-white">RESorenson LLC</span>
+              <span className="text-xl font-bold text-white">Lattara</span>
             </Link>
             <p className="text-gray-400 mb-4 max-w-md">
               Turning marketing chaos into revenue-driving systems through strategic 
@@ -24,7 +24,7 @@ const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:riley@resorensonllc.com" className="text-gray-400 hover:text-red-400 transition-colors">
+              <a href="mailto:riley@lattara.com" className="text-gray-400 hover:text-red-400 transition-colors">
                 <Mail size={20} />
               </a>
               <a href="tel:+19496327363" className="text-gray-400 hover:text-red-400 transition-colors">
@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 RESorenson LLC. All rights reserved.</p>
+          <p>&copy; 2025 Lattara. All rights reserved.</p>
         </div>
       </div>
     </footer>

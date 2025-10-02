@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://resorensonllc.com/sitemap.xml
+Sitemap: https://lattara.com/sitemap.xml
 
 # Disallow assessment results (dynamic content)
 Disallow: /assessment?*
