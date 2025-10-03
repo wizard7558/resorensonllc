@@ -2,8 +2,5 @@
 https://resorensonllc.com/* https://lattara.co/:splat 301!
 http://resorensonllc.com/* https://lattara.co/:splat 301!
 
-# Netlify Forms
-/contact 200
-
 # SPA fallback
 /* /index.html 200
