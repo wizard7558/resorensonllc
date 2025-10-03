@@ -1,3 +1,7 @@
+# Domain redirects (must come first)
+https://resorensonllc.com/* https://lattara.co/:splat 301!
+http://resorensonllc.com/* https://lattara.co/:splat 301!
+
 # Netlify Forms
 /contact 200
 
