@@ -6,14 +6,40 @@ const ClientLogos = () => {
     { name: 'DoorDash', logo: '/doordash.png' },
     { name: 'Edwards', logo: '/edwards.png' },
     { name: 'Rippling', logo: '/rippling.png' },
+    { name: 'Zenefits', logo: '/zenefits.png' },
+    { name: 'Uber', logo: '/uber.png' },
+    { name: 'Thumbtack', logo: '/thumbtack.png' },
   ];
 
+  const doubledClients = [...clients, ...clients];
+
   return (
-    <div className="py-8 border-t border-b border-gray-200 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center gap-12 flex-wrap grayscale opacity-60">
-          {clients.map((client) => (
-            <div key={client.name} className="flex items-center justify-center h-12">
+    <div className="py-8 border-t border-b border-gray-200 bg-white overflow-hidden">
+      <div className="relative">
+        <style>
+          {`
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+            .animate-scroll {
+              animation: scroll 30s linear infinite;
+            }
+            .animate-scroll:hover {
+              animation-play-state: paused;
+            }
+          `}
+        </style>
+        <div className="flex items-center gap-16 animate-scroll">
+          {doubledClients.map((client, index) => (
+            <div
+              key={`${client.name}-${index}`}
+              className="flex items-center justify-center h-12 flex-shrink-0 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            >
               <img
                 src={client.logo}
                 alt={client.name}
