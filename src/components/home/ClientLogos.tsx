@@ -12,6 +12,9 @@ const ClientLogos = () => {
     { name: 'Headway', logo: '/Headway_Logo_RGB_4.webp' },
     { name: 'Constellation', logo: '/constellation logo.webp' },
     { name: 'Shark Ninja', logo: '/shark ninja logo.webp' },
+    { name: 'Velocity Global', logo: '/velocity-global-logo-png_seeklogo-464875.png' },
+    { name: 'Consensys', logo: '/consensys@logotyp.us.png' },
+    { name: 'Ramp', logo: '/ramp@logotyp.us.png' },
   ];
 
   const doubledClients = [...clients, ...clients];
