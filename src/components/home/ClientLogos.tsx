@@ -2,19 +2,18 @@ import React from 'react';
 
 const ClientLogos = () => {
   const clients = [
-    { name: 'Reddit', logo: '/reddit.png' },
-    { name: 'DoorDash', logo: '/doordash.png' },
-    { name: 'Edwards', logo: '/edwards.png' },
-    { name: 'Rippling', logo: '/rippling.png' },
-    { name: 'Zenefits', logo: '/zenefits.png' },
-    { name: 'Uber', logo: '/uber.png' },
-    { name: 'Thumbtack', logo: '/thumbtack.png' },
-    { name: 'Headway', logo: '/Headway_Logo_RGB_4.webp' },
-    { name: 'Constellation', logo: '/constellation logo.webp' },
-    { name: 'Shark Ninja', logo: '/shark ninja logo.webp' },
-    { name: 'Velocity Global', logo: '/velocity-global-logo-png_seeklogo-464875.png' },
-    { name: 'Consensys', logo: '/consensys@logotyp.us.png' },
-    { name: 'Ramp', logo: '/ramp@logotyp.us.png' },
+    { name: 'Reddit', logo: '/client-logos/reddit.png' },
+    { name: 'DoorDash', logo: '/client-logos/doordash.png' },
+    { name: 'Edwards', logo: '/client-logos/edwards.png' },
+    { name: 'Rippling', logo: '/client-logos/rippling.png' },
+    { name: 'Zenefits', logo: '/client-logos/zenefits.png' },
+    { name: 'Uber', logo: '/client-logos/uber.png' },
+    { name: 'Thumbtack', logo: '/client-logos/thumbtack.png' },
+    { name: 'Headway', logo: '/client-logos/Headway_Logo_RGB_4.webp' },
+    { name: 'Constellation', logo: '/client-logos/constellation logo.webp' },
+    { name: 'Velocity Global', logo: '/client-logos/velocity-global-logo-png_seeklogo-464875.png' },
+    { name: 'Consensys', logo: '/client-logos/consensys@logotyp.us.png' },
+    { name: 'Ramp', logo: '/client-logos/ramp@logotyp.us.png' },
   ];
 
   const doubledClients = [...clients, ...clients];
