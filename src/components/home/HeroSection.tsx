@@ -55,12 +55,12 @@ const HeroSection = () => {
               >
                 Free Tech Stack Assessment →
               </Link>
-              
+
               <Link
-                to="/case-studies"
+                to="/contact"
                 className="inline-block text-center border border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-colors no-underline"
               >
-                View Case Studies
+                Get in Touch
               </Link>
             </div>
           </div>

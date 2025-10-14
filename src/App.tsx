@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
-import CaseStudiesPage from './pages/CaseStudiesPage';
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
 import AssessmentPage from './pages/AssessmentPage';
@@ -20,7 +19,6 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/assessment" element={<AssessmentPage />} />
