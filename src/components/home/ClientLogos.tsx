@@ -9,6 +9,9 @@ const ClientLogos = () => {
     { name: 'Zenefits', logo: '/zenefits.png' },
     { name: 'Uber', logo: '/uber.png' },
     { name: 'Thumbtack', logo: '/thumbtack.png' },
+    { name: 'Headway', logo: '/Headway_Logo_RGB_4.webp' },
+    { name: 'Constellation', logo: '/constellation logo.webp' },
+    { name: 'Shark Ninja', logo: '/shark ninja logo.webp' },
   ];
 
   const doubledClients = [...clients, ...clients];
