@@ -9,12 +9,14 @@ const ClientLogos = () => {
     { name: 'Zenefits', logo: '/zenefits.png' },
     { name: 'Uber', logo: '/uber.png' },
     { name: 'Thumbtack', logo: '/thumbtack.png' },
-    { name: 'Headway', logo: '/Headway_Logo_RGB_4.webp' },
+    { name: 'Headway', logo: '/Headway_Logo_RGB_4.png' },
     { name: 'Constellation', logo: '/constellation logo.webp' },
-    { name: 'Shark Ninja', logo: '/shark ninja logo.webp' },
     { name: 'Velocity Global', logo: '/velocity-global-logo-png_seeklogo-464875.png' },
     { name: 'Consensys', logo: '/consensys@logotyp.us.png' },
     { name: 'Ramp', logo: '/ramp@logotyp.us.png' },
+    { name: 'Zeck', logo: '/zeck logo.webp' },
+    { name: 'Pebl', logo: '/pebl logo.webp' },
+    { name: 'Hex', logo: '/hex.png' }
   ];
 
   const doubledClients = [...clients, ...clients];
