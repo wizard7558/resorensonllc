@@ -10,12 +10,12 @@ const ClientLogos = () => {
     { name: 'Uber', logo: '/uber.png' },
     { name: 'Thumbtack', logo: '/thumbtack.png' },
     { name: 'Headway', logo: '/Headway_Logo_RGB_4.png' },
-    { name: 'Constellation', logo: '/constellation logo.webp' },
     { name: 'Velocity Global', logo: '/velocity-global-logo-png_seeklogo-464875.png' },
     { name: 'Consensys', logo: '/consensys@logotyp.us.png' },
     { name: 'Ramp', logo: '/ramp@logotyp.us.png' },
     { name: 'Zeck', logo: '/zeck logo.webp' },
     { name: 'Pebl', logo: '/pebl logo.webp' },
+    { name: 'Splitero', logo: '/Splitero-Logo.webp' },
     { name: 'Hex', logo: '/hex.png' }
   ];
 
