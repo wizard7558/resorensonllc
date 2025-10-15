@@ -4,26 +4,32 @@ const ClientWork = () => {
   const clients = [
     {
       name: 'DoorDash',
+      logo: '/doordash.png',
       description: 'Rebuilt marketing attribution model across 12 acquisition channels. Result: 40% improvement in CAC efficiency.'
     },
     {
       name: 'Reddit',
+      logo: '/reddit.png',
       description: 'Built paid marketing attribution and reporting infrastructure in Looker. Unified performance data across multiple acquisition channels working alongside their data engineering team.'
     },
     {
       name: 'LMN',
+      logo: '/LMN-Logo_Full-Color.webp',
       description: 'Designed and deployed Segment CDP infrastructure to unify customer data from fragmented marketing and product systems. Enabled real-time event tracking and cross-platform attribution.'
     },
     {
       name: 'Penn Interactive',
+      logo: '/pngaming logo.png',
       description: 'Built Mixpanel analytics architecture for the Penn Play app. Created custom event taxonomy and tracking implementation to measure user behavior, feature adoption, and monetization funnels.'
     },
     {
       name: 'Velocity Global (now Pebl)',
+      logo: '/pebl logo.webp',
       description: 'Engineered HubSpot/Salesforce integration with automated lead scoring and routing. Reduced lead leakage from 35% to under 5% and cut sales team response time to under 2 minutes.'
     },
     {
       name: 'Edwards Lifesciences',
+      logo: '/edwards.png',
       description: 'Implemented Tealium CDP to consolidate customer data across multiple marketing platforms. Established unified customer profiles and real-time data governance framework for healthcare compliance requirements.'
     }
   ];
@@ -43,10 +49,14 @@ const ClientWork = () => {
               key={index}
               className="bg-gray-50 p-8 rounded-lg border border-gray-200"
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4" style={{ color: '#9D2235' }}>
-                {client.name}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <div className="flex items-center justify-center mb-6 h-16">
+                <img 
+                  src={client.logo} 
+                  alt={client.name}
+                  className="max-h-full max-w-[200px] object-contain"
+                />
+              </div>
+              <p className="text-gray-600 leading-relaxed text-center">
                 {client.description}
               </p>
             </div>
