@@ -2,6 +2,11 @@ import React from 'react';
 
 const ClientLogos = () => {
   const clients = [
+    { name: 'Velocity Global', logo: '/velocity-global-logo-png_seeklogo-464875.png' },
+    { name: 'Zeck', logo: '/zeck logo.webp' },
+    { name: 'Consensys', logo: '/consensys logo.png' },
+    { name: 'Pebl', logo: '/pebl logo.webp' },
+    { name: 'Sundae', logo: '/Sundaelogo11_13_23.jpg' },
     { name: 'DoorDash', logo: '/doordash.png' },
     { name: 'Edwards', logo: '/edwards.png' },
     { name: 'Rippling', logo: '/rippling.png' },
@@ -9,15 +14,10 @@ const ClientLogos = () => {
     { name: 'Uber', logo: '/uber.png' },
     { name: 'Thumbtack', logo: '/thumbtack.png' },
     { name: 'Headway', logo: '/Headway_Logo_RGB_4.png' },
-    { name: 'Velocity Global', logo: '/velocity-global-logo-png_seeklogo-464875.png' },
-    { name: 'Consensys', logo: '/consensys logo.png' },
     { name: 'Ramp', logo: '/Ramp-Logo-500x281.jpg' },
     { name: 'Reddit', logo: '/reddit.png' },
-    { name: 'Zeck', logo: '/zeck logo.webp' },
-    { name: 'Pebl', logo: '/pebl logo.webp' },
     { name: 'Splitero', logo: '/Splitero-Logo.webp' },
     { name: 'Hex', logo: '/hex.png' },
-    { name: 'Sundae', logo: '/Sundaelogo11_13_23.jpg' },
     { name: 'Excelligence', logo: '/Excelligence-Logo.jpg' },
     { name: 'Penn Entertainment', logo: '/pngaming logo.png' },
     { name: 'LMN', logo: '/LMN-Logo_Full-Color.webp' },
