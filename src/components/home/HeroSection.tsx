@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const HeroSection = () => {
   return (
     <section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
         <div className="text-center space-y-8">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
