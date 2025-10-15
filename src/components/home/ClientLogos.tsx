@@ -2,7 +2,6 @@ import React from 'react';
 
 const ClientLogos = () => {
   const clients = [
-    { name: 'Reddit', logo: '/reddit.png' },
     { name: 'DoorDash', logo: '/doordash.png' },
     { name: 'Edwards', logo: '/edwards.png' },
     { name: 'Rippling', logo: '/rippling.png' },
@@ -13,6 +12,7 @@ const ClientLogos = () => {
     { name: 'Velocity Global', logo: '/velocity-global-logo-png_seeklogo-464875.png' },
     { name: 'Consensys', logo: '/consensys logo.png' },
     { name: 'Ramp', logo: '/Ramp-Logo-500x281.jpg' },
+    { name: 'Reddit', logo: '/reddit.png' },
     { name: 'Zeck', logo: '/zeck logo.webp' },
     { name: 'Pebl', logo: '/pebl logo.webp' },
     { name: 'Splitero', logo: '/Splitero-Logo.webp' },
@@ -24,7 +24,7 @@ const ClientLogos = () => {
     { name: 'SharkNinja', logo: '/SharkNinja_Logo.jpg' }
   ];
 
-  const doubledClients = [...clients, ...clients];
+  const tripleClients = [...clients, ...clients, ...clients];
 
   return (
     <div className="py-8 border-t border-b border-gray-200 bg-white overflow-hidden">
@@ -36,11 +36,11 @@ const ClientLogos = () => {
                 transform: translateX(0);
               }
               100% {
-                transform: translateX(-50%);
+                transform: translateX(-33.333%);
               }
             }
             .animate-scroll {
-              animation: scroll 30s linear infinite;
+              animation: scroll 60s linear infinite;
             }
             .animate-scroll:hover {
               animation-play-state: paused;
@@ -48,7 +48,7 @@ const ClientLogos = () => {
           `}
         </style>
         <div className="flex items-center gap-16 animate-scroll">
-          {doubledClients.map((client, index) => (
+          {tripleClients.map((client, index) => (
             <div
               key={`${client.name}-${index}`}
               className="flex items-center justify-center h-12 flex-shrink-0 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
