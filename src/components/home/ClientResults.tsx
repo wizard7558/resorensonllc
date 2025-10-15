@@ -59,9 +59,12 @@ const ClientResults = () => {
     setCurrentIndex((prev) => (prev + 1) % clients.length);
   };
 
+  const getPrevIndex = () => (currentIndex - 1 + clients.length) % clients.length;
+  const getNextIndex = () => (currentIndex + 1) % clients.length;
+
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-gray-50 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
             Client Results
@@ -73,38 +76,72 @@ const ClientResults = () => {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          {/* Main carousel container */}
-          <div className="bg-white rounded-lg border border-gray-200 shadow-lg p-8 md:p-12 min-h-[320px] flex flex-col items-center justify-center">
-            {/* Logo */}
-            <div className="flex items-center justify-center mb-8 h-20">
-              <img 
-                src={clients[currentIndex].logo}
-                alt={clients[currentIndex].name}
-                className="max-h-full max-w-[280px] object-contain"
-              />
+          {/* Carousel container */}
+          <div className="relative flex items-center justify-center gap-4 md:gap-8 min-h-[400px] md:min-h-[380px]">
+            {/* Previous card (left) - hidden on mobile */}
+            <div className="hidden md:block flex-shrink-0 w-64 opacity-40 scale-90 blur-sm transition-all duration-500">
+              <div className="bg-white rounded-lg border border-gray-200 shadow-lg p-6 min-h-[320px] flex flex-col items-center justify-center">
+                <div className="flex items-center justify-center mb-4 h-16">
+                  <img 
+                    src={clients[getPrevIndex()].logo}
+                    alt={clients[getPrevIndex()].name}
+                    className="max-h-full max-w-[180px] object-contain"
+                  />
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed text-center line-clamp-4">
+                  {clients[getPrevIndex()].description}
+                </p>
+              </div>
             </div>
 
-            {/* Description */}
-            <p className="text-lg text-gray-600 leading-relaxed text-center max-w-3xl">
-              {clients[currentIndex].description}
-            </p>
+            {/* Current card (center) */}
+            <div className="flex-shrink-0 w-full md:w-96 lg:w-[480px] transition-all duration-500 z-10">
+              <div className="bg-white rounded-lg border-2 shadow-xl p-8 md:p-10 min-h-[360px] md:min-h-[320px] flex flex-col items-center justify-center" style={{ borderColor: '#9D2235' }}>
+                <div className="flex items-center justify-center mb-6 h-20">
+                  <img 
+                    src={clients[currentIndex].logo}
+                    alt={clients[currentIndex].name}
+                    className="max-h-full max-w-[280px] object-contain"
+                  />
+                </div>
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed text-center">
+                  {clients[currentIndex].description}
+                </p>
+              </div>
+            </div>
+
+            {/* Next card (right) - hidden on mobile */}
+            <div className="hidden md:block flex-shrink-0 w-64 opacity-40 scale-90 blur-sm transition-all duration-500">
+              <div className="bg-white rounded-lg border border-gray-200 shadow-lg p-6 min-h-[320px] flex flex-col items-center justify-center">
+                <div className="flex items-center justify-center mb-4 h-16">
+                  <img 
+                    src={clients[getNextIndex()].logo}
+                    alt={clients[getNextIndex()].name}
+                    className="max-h-full max-w-[180px] object-contain"
+                  />
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed text-center line-clamp-4">
+                  {clients[getNextIndex()].description}
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Navigation arrows */}
           <button
             onClick={goToPrevious}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors border border-gray-200"
+            className="absolute left-0 md:left-4 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 md:p-3 shadow-lg hover:bg-gray-50 transition-colors border border-gray-200 z-20"
             aria-label="Previous client"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-600" />
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
           </button>
           
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors border border-gray-200"
+            className="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 md:p-3 shadow-lg hover:bg-gray-50 transition-colors border border-gray-200 z-20"
             aria-label="Next client"
           >
-            <ChevronRight className="w-6 h-6 text-gray-600" />
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
           </button>
 
           {/* Dots navigation */}
