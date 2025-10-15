@@ -16,7 +16,12 @@ const ClientLogos = () => {
     { name: 'Zeck', logo: '/zeck logo.webp' },
     { name: 'Pebl', logo: '/pebl logo.webp' },
     { name: 'Splitero', logo: '/Splitero-Logo.webp' },
-    { name: 'Hex', logo: '/hex.png' }
+    { name: 'Hex', logo: '/hex.png' },
+    { name: 'Sundae', logo: '/Sundaelogo11_13_23.jpg' },
+    { name: 'Excelligence', logo: '/Excelligence-Logo.jpg' },
+    { name: 'Penn Entertainment', logo: '/pngaming logo.png' },
+    { name: 'LMN', logo: '/LMN-Logo_Full-Color.webp' },
+    { name: 'SharkNinja', logo: '/SharkNinja_Logo.jpg' }
   ];
 
   const doubledClients = [...clients, ...clients];
