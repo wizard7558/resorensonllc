@@ -16,10 +16,10 @@ const ClientLogos = () => {
     { name: 'Headway', logo: '/Headway_Logo_RGB_4.png' },
     { name: 'Ramp', logo: '/Ramp-Logo-500x281.jpg' },
     { name: 'Reddit', logo: '/reddit.png' },
+    { name: 'Penn Entertainment', logo: '/pngaming logo.png' },
     { name: 'Splitero', logo: '/Splitero-Logo.webp' },
     { name: 'Hex', logo: '/hex.png' },
     { name: 'Excelligence', logo: '/Excelligence-Logo.jpg' },
-    { name: 'Penn Entertainment', logo: '/pngaming logo.png' },
     { name: 'LMN', logo: '/LMN-Logo_Full-Color.webp' },
     { name: 'SharkNinja', logo: '/SharkNinja_Logo.jpg' }
   ];
