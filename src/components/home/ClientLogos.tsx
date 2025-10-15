@@ -36,11 +36,11 @@ const ClientLogos = () => {
                 transform: translateX(0);
               }
               100% {
-                transform: translateX(-25%);
+                transform: translateX(-50%);
               }
             }
             .animate-scroll {
-              animation: scroll 20s linear infinite;
+              animation: scroll 40s linear infinite;
             }
             .animate-scroll:hover {
               animation-play-state: paused;
