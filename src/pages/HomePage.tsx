@@ -2,11 +2,11 @@ import React from 'react';
 import SEO from '../components/SEO';
 import { organizationSchema, professionalServiceSchema, generateReviewSchema } from '../data/structuredData';
 import HeroSection from '../components/home/HeroSection';
-import ClientLogos from '../components/home/ClientLogos';
-import ClientWork from '../components/home/ClientWork';
+import ClientResults from '../components/home/ClientResults';
 import ServicesOverview from '../components/home/ServicesOverview';
 import TechnologyShowcase from '../components/home/TechnologyShowcase';
 import ROICounter from '../components/home/ROICounter';
+import OtherClients from '../components/home/OtherClients';
 import CTASection from '../components/home/CTASection';
 
 const HomePage = () => {
@@ -51,11 +51,11 @@ const HomePage = () => {
         structuredData={combinedSchema}
       />
       <HeroSection />
-      <ClientLogos />
-      <ClientWork />
+      <ClientResults />
       <ServicesOverview />
       <TechnologyShowcase />
       <ROICounter />
+      <OtherClients />
       <CTASection />
     </div>
   );
