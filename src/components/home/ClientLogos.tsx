@@ -40,7 +40,7 @@ const ClientLogos = () => {
               }
             }
             .animate-scroll {
-              animation: scroll 60s linear infinite;
+              animation: scroll 20s linear infinite;
             }
             .animate-scroll:hover {
               animation-play-state: paused;
