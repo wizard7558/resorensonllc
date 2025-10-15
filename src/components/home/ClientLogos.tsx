@@ -24,7 +24,7 @@ const ClientLogos = () => {
     { name: 'SharkNinja', logo: '/SharkNinja_Logo.jpg' }
   ];
 
-  const quadrupleClients = [...clients, ...clients, ...clients, ...clients];
+  const doubleClients = [...clients, ...clients];
 
   return (
     <div className="py-8 border-t border-b border-gray-200 bg-white overflow-hidden">
@@ -48,7 +48,7 @@ const ClientLogos = () => {
           `}
         </style>
         <div className="flex items-center gap-16 animate-scroll">
-          {quadrupleClients.map((client, index) => (
+          {doubleClients.map((client, index) => (
             <div
               key={`${client.name}-${index}`}
               className="flex items-center justify-center h-12 flex-shrink-0 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
