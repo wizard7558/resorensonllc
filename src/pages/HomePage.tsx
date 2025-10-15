@@ -3,6 +3,7 @@ import SEO from '../components/SEO';
 import { organizationSchema, professionalServiceSchema, generateReviewSchema } from '../data/structuredData';
 import HeroSection from '../components/home/HeroSection';
 import ClientLogos from '../components/home/ClientLogos';
+import ClientWork from '../components/home/ClientWork';
 import ServicesOverview from '../components/home/ServicesOverview';
 import TechnologyShowcase from '../components/home/TechnologyShowcase';
 import ROICounter from '../components/home/ROICounter';
@@ -51,6 +52,7 @@ const HomePage = () => {
       />
       <HeroSection />
       <ClientLogos />
+      <ClientWork />
       <ServicesOverview />
       <TechnologyShowcase />
       <ROICounter />
