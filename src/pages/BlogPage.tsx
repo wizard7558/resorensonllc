@@ -2,54 +2,9 @@ import React, { useEffect } from 'react';
 import SEO from '../components/SEO';
 import { Calendar, Clock, ArrowRight, TrendingUp, Terminal, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { blogPosts } from '../data/blogPosts';
 
 const BlogPage = () => {
-  const blogPosts = [
-    {
-      title: 'GA4 Migration: Complete Implementation Guide for B2B Companies',
-      excerpt: 'Step-by-step guide to migrating from Universal Analytics to GA4 without losing historical data or breaking your attribution models.',
-      date: '2025-01-15',
-      readTime: '12 MIN_READ',
-      category: 'WEB_ANALYTICS',
-      featured: true
-    },
-    {
-      title: 'The MarTech Stack Audit: 15 Critical Questions Every CMO Should Ask',
-      excerpt: 'Comprehensive checklist for evaluating your marketing technology stack effectiveness and identifying optimization opportunities.',
-      date: '2025-01-10',
-      readTime: '08 MIN_READ',
-      category: 'STRATEGY'
-    },
-    {
-      title: 'HubSpot to Salesforce Integration: Common Pitfalls and Solutions',
-      excerpt: 'Avoid the most common mistakes when connecting HubSpot and Salesforce. Real-world examples and proven solutions.',
-      date: '2025-01-05',
-      readTime: '10 MIN_READ',
-      category: 'INTEGRATION'
-    },
-    {
-      title: 'Data Governance in MarTech: Building Trust in Your Customer Data',
-      excerpt: 'Essential framework for implementing data governance policies that ensure data quality and compliance across your MarTech stack.',
-      date: '2025-01-01',
-      readTime: '15 MIN_READ',
-      category: 'DATA_MANAGEMENT'
-    },
-    {
-      title: 'Attribution Modeling Beyond First-Touch: Advanced Strategies',
-      excerpt: 'Move beyond basic attribution with custom models that accurately reflect your customer journey and marketing impact.',
-      date: '2024-12-28',
-      readTime: '11 MIN_READ',
-      category: 'ANALYTICS'
-    },
-    {
-      title: 'Marketo vs Pardot vs HubSpot: 2025 Platform Comparison',
-      excerpt: 'In-depth comparison of leading marketing automation platforms with recommendations based on company size and use cases.',
-      date: '2024-12-20',
-      readTime: '18 MIN_READ',
-      category: 'PLATFORM_REVIEW'
-    }
-  ];
-
   const categories = ['ALL', 'STRATEGY', 'WEB_ANALYTICS', 'INTEGRATION', 'DATA_MANAGEMENT', 'ANALYTICS', 'PLATFORM_REVIEW'];
 
   // HubSpot form embed
@@ -156,7 +111,7 @@ const BlogPage = () => {
                   </div>
 
                   <h2 className="text-3xl font-bold text-brand-dark mb-4 group-hover:text-brand-red transition-colors">
-                    <Link to="#" className="block">{post.title}</Link>
+                    <Link to={`/blog/${post.slug}`} className="block">{post.title}</Link>
                   </h2>
                   
                   <p className="text-gray-600 text-lg leading-relaxed mb-8 font-light">
@@ -181,7 +136,7 @@ const BlogPage = () => {
                   </div>
                   
                   <h3 className="text-lg font-bold text-brand-dark mb-3 group-hover:text-brand-red transition-colors leading-tight">
-                    <Link to="#" className="block">{post.title}</Link>
+                    <Link to={`/blog/${post.slug}`} className="block">{post.title}</Link>
                   </h3>
                   
                   <p className="text-gray-600 text-sm mb-4 line-clamp-2">
@@ -206,7 +161,7 @@ const BlogPage = () => {
                   </div>
                   
                   <h3 className="text-lg font-bold text-brand-dark mb-3 group-hover:text-brand-red transition-colors leading-tight">
-                    <Link to="#" className="block">{post.title}</Link>
+                    <Link to={`/blog/${post.slug}`} className="block">{post.title}</Link>
                   </h3>
                   
                   <p className="text-gray-600 text-sm mb-4 line-clamp-2">
