@@ -80,13 +80,11 @@ const AboutPage = () => {
                  <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Salesforce Integration</li>
                  <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Segment CDP Implementation</li>
               </ul>
-              <div className="md:mt-10">
-                <ul className="space-y-2 font-mono text-sm text-gray-600">
-                   <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Google Analytics 4 (Expert)</li>
-                   <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>SQL / Data Warehousing</li>
-                   <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Mixpanel / Amplitude</li>
-                </ul>
-              </div>
+              <ul className="space-y-2 font-mono text-sm text-gray-600">
+                 <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Google Analytics 4 (Expert)</li>
+                 <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>SQL / Data Warehousing</li>
+                 <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Mixpanel / Amplitude</li>
+              </ul>
             </div>
           </div>
 
