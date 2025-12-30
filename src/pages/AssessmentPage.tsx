@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+yeeimport React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { CheckCircle, AlertCircle, ArrowRight, BarChart3, Terminal, Cpu, Activity } from 'lucide-react';
@@ -22,10 +22,10 @@ const AssessmentPage = () => {
       id: 'company_size',
       question: 'INPUT_PARAM: COMPANY_SCALE',
       options: [
-        { value: 'startup', label: 'Startup (1-10 nodes)' },
-        { value: 'small', label: 'Small (11-50 nodes)' },
-        { value: 'medium', label: 'Medium (51-250 nodes)' },
-        { value: 'large', label: 'Large (250+ nodes)' }
+        { value: 'startup', label: 'Startup (1-10 employees)' },
+        { value: 'small', label: 'Small (11-50 employees)' },
+        { value: 'medium', label: 'Medium (51-250 employees)' },
+        { value: 'large', label: 'Large (250+ employees)' }
       ]
     },
     {
