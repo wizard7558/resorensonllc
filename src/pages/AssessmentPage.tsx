@@ -1,4 +1,4 @@
-yeeimport React, { useState } from 'react';
+import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { CheckCircle, AlertCircle, ArrowRight, BarChart3, Terminal, Cpu, Activity } from 'lucide-react';
