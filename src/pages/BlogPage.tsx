@@ -1,22 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import SEO from '../components/SEO';
-import { Calendar, Clock, ArrowRight, TrendingUp, Terminal, FileText } from 'lucide-react';
+import { Clock, Terminal } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { blogPosts } from '../data/blogPosts';
+import NewsletterForm from '../components/NewsletterForm';
 
 const BlogPage = () => {
   const categories = ['ALL', 'STRATEGY', 'WEB_ANALYTICS', 'INTEGRATION', 'DATA_MANAGEMENT', 'ANALYTICS', 'PLATFORM_REVIEW'];
-
-  // HubSpot form embed
-  useEffect(() => {
-    // Check if the script is already present
-    if (!document.querySelector('script[src="https://js.hsforms.net/forms/embed/45832447.js"]')) {
-      const script = document.createElement('script');
-      script.src = 'https://js.hsforms.net/forms/embed/45832447.js';
-      script.defer = true;
-      document.body.appendChild(script);
-    }
-  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -60,13 +50,10 @@ const BlogPage = () => {
                 </p>
              </div>
              <div className="w-full md:w-auto flex-1 max-w-md">
-                {/* HubSpot Newsletter Form Container */}
-                <div 
-                  className="hs-form-frame bg-gray-50 p-4 border border-gray-200" 
-                  data-region="na1" 
-                  data-form-id="6470b071-68f5-4c52-8264-5c83cab75259" 
-                  data-portal-id="45832447"
-                ></div>
+                <NewsletterForm 
+                  portalId="45832447" 
+                  formId="6470b071-68f5-4c52-8264-5c83cab75259" 
+                />
              </div>
           </div>
         </div>
