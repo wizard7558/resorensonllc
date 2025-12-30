@@ -93,7 +93,7 @@ const ClientResults = () => {
 
             <div className="space-y-6 mt-8">
               <div className="text-gray-500 text-xs">
-                > ACCESSING_LOG: {clients[activeIndex].name.toUpperCase()}
+                &gt; ACCESSING_LOG: {clients[activeIndex].name.toUpperCase()}
               </div>
 
               <div>
