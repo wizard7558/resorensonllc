@@ -30,13 +30,13 @@ const AboutPage = () => {
              
              <div className="mt-8 space-y-4">
                 <Reveal delay={0.2}>
-                   <div className="flex items-center space-x-3 p-4 bg-gray-50 border border-gray-200">
-                      <Code className="text-brand-red" size={20} />
-                      <div>
-                         <p className="text-xs font-mono text-gray-500">CORE_COMPETENCY</p>
-                         <p className="font-bold text-sm text-brand-dark">Full-Stack Data Arch</p>
-                      </div>
-                   </div>
+                  <div className="flex items-center space-x-3 p-4 bg-gray-50 border border-gray-200">
+                     <Code className="text-brand-red" size={20} />
+                     <div>
+                        <p className="text-xs font-mono text-gray-500">CORE_COMPETENCY</p>
+                        <p className="font-bold text-sm text-brand-dark">Full-Stack Data Architect</p>
+                     </div>
+                  </div>
                 </Reveal>
                 <Reveal delay={0.3}>
                    <div className="flex items-center space-x-3 p-4 bg-gray-50 border border-gray-200">
