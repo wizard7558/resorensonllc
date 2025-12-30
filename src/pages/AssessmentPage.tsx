@@ -178,55 +178,67 @@ const AssessmentPage = () => {
     }
   };
 
-  const handleDownloadLogs = () => {
-    const score = calculateScore();
-    const recommendations = getRecommendations();
-    const timestamp = new Date().toISOString();
-    
-    // Detailed Recommendation Content Mapping
-    const detailedAdvice: Record<string, string> = {
-      'INIT_PROTOCOL: Basic Tool Integration (HubSpot + Salesforce)': 
-        'Your core revenue systems are currently operating in silos. This lack of synchronization leads to data decay and manual reconciliation errors. We recommend deploying a bi-directional sync with strict field-level mapping to ensure Sales and Marketing share a single source of truth.',
-      'DEPLOY: Fundamental Lead Tracking':
-        'Without a standardized UTM and lifecycle tracking protocol, your marketing spend is effectively unmeasurable. You must implement a centralized tracking script and hidden form fields to capture source, medium, and campaign data at every conversion point.',
-      'CONFIG: Basic Reporting Dashboards':
-        'Standardizing your metrics into a single dashboard will eliminate "gut-feel" decision making. We recommend building a high-level revenue cockpit that tracks MQL-to-Opp velocity and CAC-per-channel in real-time.',
-      'EXEC: Data Governance Cleanup':
-        'Duplicate records and inconsistent data formats are polluting your automation logic. A structural cleanup is required to normalize job titles, industry categories, and email statuses before scaling your outbound efforts.',
-      'UPGRADE: Attribution Modeling v2':
-        'First-touch attribution is hiding your most valuable touchpoints. We recommend transitioning to a W-Shaped or Algorithmic model that distributes credit to mid-funnel content and sales-enablement activities that actually close deals.',
-      'AUTO: Lead Scoring & Routing':
-        'Your SDRs are currently manually filtering leads, which increases response latency. By implementing a predictive scoring model and automated routing logic, we can ensure high-intent leads are contacted within seconds of conversion.',
-      'EXPAND: Integration Capabilities':
-        'Your current stack has reached its architectural limit. We recommend introducing custom API middleware or a CDP layer to handle complex data transfers between your product analytics and your CRM.',
-      'DEV: Custom Reporting Workflows':
-        'Standard SaaS reports no longer suffice for your scale. We recommend deploying custom SQL-based reporting in a data warehouse like Snowflake to perform deep-dive cohort analysis and LTV forecasting.',
-      'DEPLOY: Predictive Analytics':
-        'Leverage your historical data to forecast future revenue performance. By deploying machine learning models, we can identify which lead profiles have the highest probability of closing based on thousands of historical data points.',
-      'SCALE: Personalization Engines':
-        'Move beyond "First Name" tags. We recommend implementing dynamic content blocks that adapt your website and email messaging based on the user\'s real-time behavioral data and firmographic profile.',
-      'AI: Optimization Models':
-        'Automate your A/B testing and budget allocation. We recommend deploying AI agents to monitor campaign performance and shift spend toward the highest-performing assets with sub-second latency.',
-      'ARCH: Enterprise Data Grid':
-        'Your infrastructure requires a globally distributed data layer. We recommend architecting a headless MarTech stack where your customer data is decoupled from specific tool vendors, giving you ultimate flexibility and reliability.'
-    };
-
-    // Holistic Summary Logic
-    let analysis = '';
+  const getSyntheticAnalysis = (score: number) => {
     const size = answers['company_size'];
     const tools = answers['current_tools'];
     const integration = answers['data_integration'];
 
     if (size === 'large' && (integration === 'not_integrated' || integration === 'partially')) {
-      analysis = 'ENTERPRISE_FRICTION DETECTED: You are operating at high scale with low infrastructure maturity. This creates a "Data Tax" on every dollar spent, where significant revenue is lost simply because systems cannot communicate. Priority should be on infrastructure unification.';
+      return {
+        title: 'ENTERPRISE_FRICTION DETECTED',
+        body: 'You are operating at high scale with low infrastructure maturity. This creates a "Data Tax" on every dollar spent, where significant revenue is lost simply because systems cannot communicate. Priority should be on infrastructure unification.'
+      };
     } else if (size === 'startup' && (tools === '16+' || tools === '9-15')) {
-      analysis = 'EARLY_STAGE_BLOAT DETECTED: Your stack complexity is outpacing your current operational needs. This often leads to "SaaS Creep" where tools are under-utilized but continue to drain budget. Consolidation and focused integration will drive higher ROI than adding new features.';
+      return {
+        title: 'EARLY_STAGE_BLOAT DETECTED',
+        body: 'Your stack complexity is outpacing your current operational needs. This often leads to "SaaS Creep" where tools are under-utilized but continue to drain budget. Consolidation and focused integration will drive higher ROI than adding new features.'
+      };
     } else if (score > 80) {
-      analysis = 'SYSTEM_MATURITY OPTIMAL: Your infrastructure is technically sound. Your primary bottleneck is no longer "fixing" but "optimizing." Focus on edge-case automation and advanced predictive modeling to squeeze the remaining 5-10% of efficiency from the stack.';
+      return {
+        title: 'SYSTEM_MATURITY OPTIMAL',
+        body: 'Your infrastructure is technically sound. Your primary bottleneck is no longer "fixing" but "optimizing." Focus on edge-case automation and advanced predictive modeling to squeeze the remaining 5-10% of efficiency from the stack.'
+      };
     } else {
-      analysis = 'FOUNDATIONAL_GAPS DETECTED: Your current configuration lacks the necessary plumbing to accurately track the customer journey. Until these foundational integration and tracking issues are resolved, scaling spend will only exacerbate existing inefficiencies.';
+      return {
+        title: 'FOUNDATIONAL_GAPS DETECTED',
+        body: 'Your current configuration lacks the necessary plumbing to accurately track the customer journey. Until these foundational integration and tracking issues are resolved, scaling spend will only exacerbate existing inefficiencies.'
+      };
     }
+  };
 
+  const detailedAdvice: Record<string, string> = {
+    'INIT_PROTOCOL: Basic Tool Integration (HubSpot + Salesforce)': 
+      'Your core revenue systems are currently operating in silos. This lack of synchronization leads to data decay and manual reconciliation errors. We recommend deploying a bi-directional sync with strict field-level mapping to ensure Sales and Marketing share a single source of truth.',
+    'DEPLOY: Fundamental Lead Tracking':
+      'Without a standardized UTM and lifecycle tracking protocol, your marketing spend is effectively unmeasurable. You must implement a centralized tracking script and hidden form fields to capture source, medium, and campaign data at every conversion point.',
+    'CONFIG: Basic Reporting Dashboards':
+      'Standardizing your metrics into a single dashboard will eliminate "gut-feel" decision making. We recommend building a high-level revenue cockpit that tracks MQL-to-Opp velocity and CAC-per-channel in real-time.',
+    'EXEC: Data Governance Cleanup':
+      'Duplicate records and inconsistent data formats are polluting your automation logic. A structural cleanup is required to normalize job titles, industry categories, and email statuses before scaling your outbound efforts.',
+    'UPGRADE: Attribution Modeling v2':
+      'First-touch attribution is hiding your most valuable touchpoints. We recommend transitioning to a W-Shaped or Algorithmic model that distributes credit to mid-funnel content and sales-enablement activities that actually close deals.',
+    'AUTO: Lead Scoring & Routing':
+      'Your SDRs are currently manually filtering leads, which increases response latency. By implementing a predictive scoring model and automated routing logic, we can ensure high-intent leads are contacted within seconds of conversion.',
+    'EXPAND: Integration Capabilities':
+      'Your current stack has reached its architectural limit. We recommend introducing custom API middleware or a CDP layer to handle complex data transfers between your product analytics and your CRM.',
+    'DEV: Custom Reporting Workflows':
+      'Standard SaaS reports no longer suffice for your scale. We recommend deploying custom SQL-based reporting in a data warehouse like Snowflake to perform deep-dive cohort analysis and LTV forecasting.',
+    'DEPLOY: Predictive Analytics':
+      'Leverage your historical data to forecast future revenue performance. By deploying machine learning models, we can identify which lead profiles have the highest probability of closing based on thousands of historical data points.',
+    'SCALE: Personalization Engines':
+      'Move beyond "First Name" tags. We recommend implementing dynamic content blocks that adapt your website and email messaging based on the user\'s real-time behavioral data and firmographic profile.',
+    'AI: Optimization Models':
+      'Automate your A/B testing and budget allocation. We recommend deploying AI agents to monitor campaign performance and shift spend toward the highest-performing assets with sub-second latency.',
+    'ARCH: Enterprise Data Grid':
+      'Your infrastructure requires a globally distributed data layer. We recommend architecting a headless MarTech stack where your customer data is decoupled from specific tool vendors, giving you ultimate flexibility and reliability.'
+  };
+
+  const handleDownloadLogs = () => {
+    const score = calculateScore();
+    const recommendations = getRecommendations();
+    const analysis = getSyntheticAnalysis(score);
+    const timestamp = new Date().toISOString();
+    
     let content = `LATTARA_SYSTEM_AUDIT_PLAYBOOK
 ===============================
 AUDIT_ID: ${Math.random().toString(36).substr(2, 9).toUpperCase()}
@@ -236,7 +248,8 @@ MATURITY_LEVEL: ${recommendations.level}
 
 SYNTHETIC_ANALYSIS SUMMARY:
 ---------------------------
-${analysis}
+${analysis.title}
+${analysis.body}
 
 DIAGNOSTIC_DETAILS:
 -------------------
@@ -285,9 +298,12 @@ END_OF_LOG
     URL.revokeObjectURL(url);
   };
 
+  const [expandedPatch, setExpandedPatch] = useState<number | null>(null);
+
   if (showResults) {
     const score = calculateScore();
     const recommendations = getRecommendations();
+    const analysis = getSyntheticAnalysis(score);
 
     return (
       <div className="relative min-h-screen bg-white py-20 font-mono overflow-hidden">
@@ -316,6 +332,20 @@ END_OF_LOG
                     <div className="text-sm text-brand-dark">{new Date().toISOString().split('T')[0]}</div>
                  </div>
               </div>
+
+              {/* Synthetic Analysis Summary */}
+              <Reveal delay={0.1}>
+                <div className="mb-12 bg-gray-900 text-white p-8 border-l-4 border-brand-red">
+                   <div className="flex items-center space-x-2 text-brand-red text-xs font-bold mb-4">
+                      <Activity size={14} />
+                      <span>SYNTHETIC_ANALYSIS_OUTPUT</span>
+                   </div>
+                   <h2 className="text-xl font-bold mb-4 tracking-tight">{analysis.title}</h2>
+                   <p className="text-gray-400 text-sm leading-relaxed font-light">
+                      {analysis.body}
+                   </p>
+                </div>
+              </Reveal>
 
               {/* Score Display */}
               <Reveal delay={0.2}>
@@ -352,12 +382,34 @@ END_OF_LOG
                 </Reveal>
                 <div className="grid grid-cols-1 gap-px bg-gray-200 border border-gray-200">
                   {recommendations.recommendations.map((rec, index) => (
-                    <Reveal key={index} delay={0.5 + (index * 0.1)}>
-                      <div className="flex items-center space-x-3 p-4 bg-white">
-                        <span className="text-brand-red font-bold text-xs">{`0${index + 1}`}</span>
-                        <span className="text-gray-700 text-sm">{rec}</span>
-                      </div>
-                    </Reveal>
+                    <div key={index} className="bg-white">
+                      <button 
+                        onClick={() => setExpandedPatch(expandedPatch === index ? null : index)}
+                        className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors text-left group"
+                      >
+                        <div className="flex items-center space-x-3">
+                          <span className="text-brand-red font-bold text-xs">{`0${index + 1}`}</span>
+                          <span className="text-gray-700 text-sm font-bold group-hover:text-brand-dark transition-colors">{rec}</span>
+                        </div>
+                        <div className={`transform transition-transform duration-200 ${expandedPatch === index ? 'rotate-180' : ''}`}>
+                           <ArrowRight size={14} className="text-gray-400 rotate-90" />
+                        </div>
+                      </button>
+                      <AnimatePresence>
+                        {expandedPatch === index && (
+                          <motion.div 
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="p-6 pt-0 text-gray-500 text-xs leading-relaxed border-t border-gray-50 bg-gray-50/30">
+                               {detailedAdvice[rec] || 'Further technical audit required to define specific patch parameters.'}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
                   ))}
                 </div>
               </div>
