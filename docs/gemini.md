@@ -22,3 +22,6 @@ We are overhauling the Lattara (MarTech/RevOps consulting) website to move away 
 - **Tone of Voice:**
   - Use terms like: "Protocols", "Architecture", "Deployment", "Telemetry", "Throughput", "Latency", "System Status".
   - Avoid marketing fluff. Be direct and concise.
+
+## Development Protocols
+- **Version Control:** The Gemini agent is authorized to commit any changes directly to the GitHub repository upon completion of a task. Always use concise, semantic commit messages.
