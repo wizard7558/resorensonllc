@@ -183,15 +183,60 @@ const AssessmentPage = () => {
     const recommendations = getRecommendations();
     const timestamp = new Date().toISOString();
     
+    // Detailed Recommendation Content Mapping
+    const detailedAdvice: Record<string, string> = {
+      'INIT_PROTOCOL: Basic Tool Integration (HubSpot + Salesforce)': 
+        'Your core revenue systems are currently operating in silos. This lack of synchronization leads to data decay and manual reconciliation errors. We recommend deploying a bi-directional sync with strict field-level mapping to ensure Sales and Marketing share a single source of truth.',
+      'DEPLOY: Fundamental Lead Tracking':
+        'Without a standardized UTM and lifecycle tracking protocol, your marketing spend is effectively unmeasurable. You must implement a centralized tracking script and hidden form fields to capture source, medium, and campaign data at every conversion point.',
+      'CONFIG: Basic Reporting Dashboards':
+        'Standardizing your metrics into a single dashboard will eliminate "gut-feel" decision making. We recommend building a high-level revenue cockpit that tracks MQL-to-Opp velocity and CAC-per-channel in real-time.',
+      'EXEC: Data Governance Cleanup':
+        'Duplicate records and inconsistent data formats are polluting your automation logic. A structural cleanup is required to normalize job titles, industry categories, and email statuses before scaling your outbound efforts.',
+      'UPGRADE: Attribution Modeling v2':
+        'First-touch attribution is hiding your most valuable touchpoints. We recommend transitioning to a W-Shaped or Algorithmic model that distributes credit to mid-funnel content and sales-enablement activities that actually close deals.',
+      'AUTO: Lead Scoring & Routing':
+        'Your SDRs are currently manually filtering leads, which increases response latency. By implementing a predictive scoring model and automated routing logic, we can ensure high-intent leads are contacted within seconds of conversion.',
+      'EXPAND: Integration Capabilities':
+        'Your current stack has reached its architectural limit. We recommend introducing custom API middleware or a CDP layer to handle complex data transfers between your product analytics and your CRM.',
+      'DEV: Custom Reporting Workflows':
+        'Standard SaaS reports no longer suffice for your scale. We recommend deploying custom SQL-based reporting in a data warehouse like Snowflake to perform deep-dive cohort analysis and LTV forecasting.',
+      'DEPLOY: Predictive Analytics':
+        'Leverage your historical data to forecast future revenue performance. By deploying machine learning models, we can identify which lead profiles have the highest probability of closing based on thousands of historical data points.',
+      'SCALE: Personalization Engines':
+        'Move beyond "First Name" tags. We recommend implementing dynamic content blocks that adapt your website and email messaging based on the user\'s real-time behavioral data and firmographic profile.',
+      'AI: Optimization Models':
+        'Automate your A/B testing and budget allocation. We recommend deploying AI agents to monitor campaign performance and shift spend toward the highest-performing assets with sub-second latency.',
+      'ARCH: Enterprise Data Grid':
+        'Your infrastructure requires a globally distributed data layer. We recommend architecting a headless MarTech stack where your customer data is decoupled from specific tool vendors, giving you ultimate flexibility and reliability.'
+    };
+
+    // Holistic Summary Logic
+    let analysis = '';
+    const size = answers['company_size'];
+    const tools = answers['current_tools'];
+    const integration = answers['data_integration'];
+
+    if (size === 'large' && (integration === 'not_integrated' || integration === 'partially')) {
+      analysis = 'ENTERPRISE_FRICTION DETECTED: You are operating at high scale with low infrastructure maturity. This creates a "Data Tax" on every dollar spent, where significant revenue is lost simply because systems cannot communicate. Priority should be on infrastructure unification.';
+    } else if (size === 'startup' && (tools === '16+' || tools === '9-15')) {
+      analysis = 'EARLY_STAGE_BLOAT DETECTED: Your stack complexity is outpacing your current operational needs. This often leads to "SaaS Creep" where tools are under-utilized but continue to drain budget. Consolidation and focused integration will drive higher ROI than adding new features.';
+    } else if (score > 80) {
+      analysis = 'SYSTEM_MATURITY OPTIMAL: Your infrastructure is technically sound. Your primary bottleneck is no longer "fixing" but "optimizing." Focus on edge-case automation and advanced predictive modeling to squeeze the remaining 5-10% of efficiency from the stack.';
+    } else {
+      analysis = 'FOUNDATIONAL_GAPS DETECTED: Your current configuration lacks the necessary plumbing to accurately track the customer journey. Until these foundational integration and tracking issues are resolved, scaling spend will only exacerbate existing inefficiencies.';
+    }
+
     let content = `LATTARA_SYSTEM_AUDIT_PLAYBOOK
 ===============================
-ID: ${Math.random().toString(36).substr(2, 9).toUpperCase()}
+AUDIT_ID: ${Math.random().toString(36).substr(2, 9).toUpperCase()}
 TIMESTAMP: ${timestamp}
 OPTIMIZATION_SCORE: ${score}/100
-STATUS: ${recommendations.level}
+MATURITY_LEVEL: ${recommendations.level}
 
-SUMMARY:
-${recommendations.nextSteps}
+SYNTHETIC_ANALYSIS SUMMARY:
+---------------------------
+${analysis}
 
 DIAGNOSTIC_DETAILS:
 -------------------
@@ -204,28 +249,27 @@ DIAGNOSTIC_DETAILS:
 INPUT: ${answerLabel}
 `;
       
-      // Add specific logic-based observations
       if (q.id === 'data_integration' && answerValue === 'not_integrated') {
-        content += `OBSERVATION: Critical data silos detected. High risk of lead leakage and attribution gaps.
-REMEDY: Prioritize CRM-to-Automation sync protocols immediately.
+        content += `OBSERVATION: CRITICAL_SILO. Data is not flowing between core systems.
+IMPACT: High risk of lead leakage and duplicate outreach. CRM data is likely 30%+ inaccurate.
 `;
       }
       if (q.id === 'lead_tracking' && answerValue === 'no_tracking') {
-        content += `OBSERVATION: Zero full-funnel visibility. Marketing ROI is currently unmeasurable.
-REMEDY: Deploy UTM capture scripts and lifecycle mapping.
-`;
-      }
-      if (q.id === 'stack_volume' && answerValue === '16+') {
-        content += `OBSERVATION: High tool latency detected. Redundant SaaS spend likely exceeding 30%.
-REMEDY: Execute stack consolidation audit.
+        content += `OBSERVATION: ATTRIBUTION_BLINDNESS. No UTM or conversion path capture.
+IMPACT: All marketing spend is essentially unvalidated. Budget allocation is based on conjecture rather than throughput.
 `;
       }
       content += '\n';
     });
 
-    content += `DEPLOYMENT_ROADMAP:
--------------------
-${recommendations.recommendations.map((rec, i) => `${i + 1}. ${rec}`).join('\n')}
+    content += `DEPLOYMENT_ROADMAP & RECOMMENDATIONS:
+-------------------------------------
+${recommendations.recommendations.map((rec, i) => {
+  const detail = detailedAdvice[rec] || 'Further technical audit required to define specific patch parameters.';
+  return `${i + 1}. ${rec}\n   ${detail}\n`;
+}).join('\n')}
+
+CONTACT_ENGINEER for implementation specs: https://meetings.hubspot.com/lattara/meet-with-riley
 
 END_OF_LOG
 `;
@@ -234,7 +278,7 @@ END_OF_LOG
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `Lattara_Audit_${new Date().getTime()}.txt`;
+    link.download = `Lattara_Playbook_${new Date().getTime()}.txt`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
