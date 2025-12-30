@@ -6,75 +6,87 @@ const ServicesOverview = () => {
   const services = [
     {
       icon: Settings,
-      title: 'MarTech Stack Optimization',
-      description: 'Lead scoring, attribution modeling, and automation workflows that eliminate data silos and drive qualified pipeline.',
-      features: ['Lead Scoring & Routing', 'Attribution Modeling', 'Workflow Automation', 'Integration Architecture']
+      code: 'MOD_01',
+      title: 'Stack Optimization',
+      description: 'Lead scoring, attribution modeling, and workflows to eliminate data silos.',
+      features: ['Lead_Scoring', 'Attribution_v2', 'Auto_Routing']
     },
     {
       icon: Database,
+      code: 'MOD_02',
       title: 'Data Infrastructure',
-      description: 'CDP implementation, data warehousing, and pipeline architecture for unified customer data and actionable insights.',
-      features: ['CDP Implementation', 'Data Warehousing', 'Pipeline Architecture', 'Data Governance']
+      description: 'CDP implementation and warehousing for unified customer profiles.',
+      features: ['CDP_Deploy', 'Warehousing', 'Governance']
     },
     {
       icon: BarChart3,
-      title: 'Web Analytics & Reporting',
-      description: 'GA4 setup, conversion tracking, and dashboard creation with governance frameworks for reliable decision-making.',
-      features: ['GA4 Implementation', 'Conversion Tracking', 'Custom Dashboards', 'Data Governance']
+      code: 'MOD_03',
+      title: 'Analytics & Reporting',
+      description: 'GA4 setup and conversion tracking for reliable decision-making.',
+      features: ['GA4_Setup', 'Dashboards', 'Tracking_Pixels']
     },
     {
       icon: GitBranch,
-      title: 'Revenue Operations',
-      description: 'Sales and marketing alignment through optimized lead lifecycle management and systematic revenue processes.',
-      features: ['Sales/Marketing Alignment', 'Lead Lifecycle Optimization', 'Revenue Process Design', 'Performance Metrics']
+      code: 'MOD_04',
+      title: 'RevOps Alignment',
+      description: 'Systematic revenue processes bridging sales and marketing gaps.',
+      features: ['Lifecycle_Mgmt', 'SLA_Design', 'Funnel_Metrics']
     }
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-24 bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Strategic Services That Drive Results
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive MarTech solutions focused on measurable business outcomes, 
-            not just technical implementation.
-          </p>
+        
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+              Core System Modules
+            </h2>
+            <p className="text-lg text-gray-600 font-light">
+              We don't just "consult." We deploy engineering-grade solutions to fix your revenue infrastructure.
+            </p>
+          </div>
+          <div className="hidden md:block">
+            <Link to="/services" className="text-brand-red font-mono text-sm flex items-center hover:underline">
+              FULL_SERVICE_CATALOG <ArrowRight size={16} className="ml-2" />
+            </Link>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-white p-8 rounded-lg border border-gray-200 hover:border-red-500 shadow-sm hover:shadow-md transition-all duration-300 group"
+              className="bg-white p-8 border border-gray-200 hover:border-brand-red transition-all duration-300 group shadow-sm hover:shadow-md relative overflow-hidden"
             >
-              <div className="flex items-center space-x-3 mb-4">
-                <service.icon className="h-8 w-8 group-hover:text-red-600 transition-colors" style={{ color: '#9D2235' }} />
-                <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+              {/* Technical Corner Accent */}
+              <div className="absolute top-0 right-0 w-16 h-16 bg-gray-50 rounded-bl-full -mr-8 -mt-8 transition-colors group-hover:bg-red-50" />
+              
+              <div className="flex justify-between items-start mb-6">
+                <div className="p-3 bg-gray-50 border border-gray-100 group-hover:border-brand-red/30 transition-colors">
+                  <service.icon className="h-6 w-6 text-gray-700 group-hover:text-brand-red" />
+                </div>
+                <span className="font-mono text-xs text-gray-400 group-hover:text-brand-red">{service.code}</span>
               </div>
               
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <h3 className="text-xl font-bold text-brand-dark mb-3 group-hover:text-brand-red transition-colors">
+                {service.title}
+              </h3>
+              
+              <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                 {service.description}
               </p>
 
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center space-x-2 text-gray-500">
-                    <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#9D2235' }}></div>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                to="/services"
-                className="inline-flex items-center space-x-2 hover:text-red-700 transition-colors font-medium"
-                style={{ color: '#9D2235' }}
-              >
-                <span>Learn More</span>
-                <ArrowRight size={16} />
-              </Link>
+              <div className="border-t border-gray-100 pt-4">
+                <div className="flex flex-wrap gap-2">
+                  {service.features.map((feature, idx) => (
+                    <span key={idx} className="text-xs font-mono bg-gray-50 text-gray-600 px-2 py-1 border border-gray-200">
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           ))}
         </div>
