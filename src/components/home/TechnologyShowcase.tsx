@@ -1,148 +1,90 @@
 import React from 'react';
+import { Database, Share2, Layers, Box, Cpu } from 'lucide-react';
 
 const TechnologyShowcase = () => {
-  const platformCategories = [
+  const categories = [
     {
-      category: 'CRM & Marketing Automation',
-      platforms: [
-        { 
-          name: 'HubSpot', 
-          logo: '/hubspot.svg'
-        },
-        { 
-          name: 'Salesforce', 
-          logo: '/salesforce_backup.png'
-        },
-        { 
-          name: 'Zoho', 
-          logo: '/zoho_backup.webp'
-        }
-      ]
+      id: 'CRM_AUTO',
+      icon: Layers,
+      name: 'CRM & Automation',
+      stack: ['HubSpot', 'Salesforce', 'Zoho']
     },
     {
-      category: 'Web & App Analytics',
-      platforms: [
-        { 
-          name: 'Google Analytics 4', 
-          logo: '/google_analytics_4.svg'
-        },
-        { 
-          name: 'Mixpanel', 
-          logo: '/mixpanel_backup.png'
-        },
-        { 
-          name: 'Amplitude', 
-          logo: '/amplitude.png'
-        }
-      ]
+      id: 'ANALYTICS',
+      icon: Box,
+      name: 'Analytics Engine',
+      stack: ['GA4', 'Mixpanel', 'Amplitude']
     },
     {
-      category: 'Customer Data Platform',
-      platforms: [
-        { 
-          name: 'Segment', 
-          logo: '/segment_backup.svg'
-        },
-        { 
-          name: 'Tealium', 
-          logo: '/tealium.png'
-        },
-        { 
-          name: 'Customer.io', 
-          logo: '/customer_io.png'
-        }
-      ]
+      id: 'CDP_CORE',
+      icon: Database,
+      name: 'Customer Data Platforms',
+      stack: ['Segment', 'Tealium', 'Customer.io']
     },
     {
-      category: 'Data Warehouse',
-      platforms: [
-        { 
-          name: 'Snowflake', 
-          logo: '/snowflake.png'
-        },
-        { 
-          name: 'BigQuery', 
-          logo: '/google_bigquery_logo.webp'
-        },
-        { 
-          name: 'Redshift', 
-          logo: '/redshift.png'
-        }
-      ]
+      id: 'DATA_WH',
+      icon: Cpu,
+      name: 'Data Warehousing',
+      stack: ['Snowflake', 'BigQuery', 'Redshift']
     },
     {
-      category: 'Business Intelligence',
-      platforms: [
-        { 
-          name: 'Tableau', 
-          logo: '/tableau.png'
-        },
-        { 
-          name: 'Looker', 
-          logo: '/looker_backup.png'
-        },
-        { 
-          name: 'Hex', 
-          logo: '/hex.png'
-        }
-      ]
+      id: 'BI_VIZ',
+      icon: Share2,
+      name: 'Business Intelligence',
+      stack: ['Tableau', 'Looker', 'Hex']
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Certified Expertise Across Leading Platforms
+        <div className="mb-16 text-center md:text-left">
+          <div className="inline-block px-2 py-1 bg-gray-100 border border-gray-200 text-xs font-mono text-gray-500 mb-4">
+            :: SYSTEM_INTEGRATIONS
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+            Certified Tech Stack Support
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Deep technical knowledge and certified expertise in the MarTech tools 
-            that power modern revenue operations.
+          <p className="text-gray-600 max-w-2xl font-light">
+            We possess deep architectural knowledge of the following platforms. 
+            We don't just "use" them; we engineer them to talk to each other.
           </p>
         </div>
 
-        <div className="space-y-12">
-          {platformCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="space-y-6">
-              <h3 className="text-xl font-semibold text-center" style={{ color: '#9D2235' }}>
-                {category.category}
-              </h3>
-              
-              <div className="flex flex-wrap justify-center gap-6">
-                {category.platforms.map((platform, platformIndex) => (
-                  <div 
-                    key={platformIndex}
-                    className="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:border-red-500 hover:shadow-md transition-all duration-300 group text-center w-[220px]"
-                  >
-                    <div className="h-24 w-24 mx-auto mb-6 flex items-center justify-center bg-white rounded-lg p-3">
-                      <img
-                        src={platform.logo}
-                        alt={`${platform.name} logo`}
-                        className="max-h-18 max-w-18 object-contain"
-                        onError={(e) => {
-                          // Fallback to text-based logo if image fails to load
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.innerHTML = `
-                              <div class="h-18 w-18 bg-gradient-to-r from-red-400 to-gray-400 rounded-lg flex items-center justify-center mx-auto">
-                                <span class="text-white font-bold text-xs text-center leading-tight">
-                                  ${platform.name.split(' ').map(word => word[0]).join('')}
-                                </span>
-                              </div>
-                            `;
-                          }
-                        }}
-                      />
-                    </div>
-                    <h4 className="text-gray-900 font-semibold mb-1 text-base">{platform.name}</h4>
-                  </div>
-                ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 border border-gray-200">
+          {categories.map((cat) => (
+            <div key={cat.id} className="bg-white p-8 hover:bg-gray-50 transition-colors group">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-2 bg-gray-100 text-gray-600 group-hover:bg-brand-red group-hover:text-white transition-colors">
+                  <cat.icon size={20} />
+                </div>
+                <span className="font-mono text-xs text-gray-400 group-hover:text-brand-red">
+                  {cat.id}
+                </span>
               </div>
+              
+              <h3 className="font-bold text-brand-dark mb-4">{cat.name}</h3>
+              
+              <ul className="space-y-2">
+                {cat.stack.map((tool) => (
+                  <li key={tool} className="flex items-center space-x-2 text-sm text-gray-600 font-mono">
+                    <span className="w-1.5 h-1.5 bg-gray-300 group-hover:bg-brand-red" />
+                    <span>{tool}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
+          
+          {/* Empty filler cell for grid alignment if needed */}
+          <div className="bg-gray-50 p-8 flex items-center justify-center">
+             <div className="text-center">
+                <p className="font-mono text-xs text-gray-400 mb-2">NEED_CUSTOM_INTEGRATION?</p>
+                <a href="/contact" className="text-brand-red font-mono text-sm hover:underline border-b border-brand-red pb-0.5">
+                   REQUEST_SPEC >
+                </a>
+             </div>
+          </div>
         </div>
       </div>
     </section>
