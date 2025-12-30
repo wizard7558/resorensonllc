@@ -74,23 +74,19 @@ const AboutPage = () => {
             </div>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Reveal delay={0.4}>
-                <h3 className="col-span-full font-mono text-sm font-bold text-gray-900 border-b border-gray-200 pb-2 mb-4">CERTIFIED_PROTOCOLS</h3>
+              <h3 className="col-span-full font-mono text-sm font-bold text-gray-900 border-b border-gray-200 pb-2 mb-4">CERTIFIED_PROTOCOLS</h3>
+              <ul className="space-y-2 font-mono text-sm text-gray-600">
+                 <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>HubSpot Architecture</li>
+                 <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Salesforce Integration</li>
+                 <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Segment CDP Implementation</li>
+              </ul>
+              <div className="md:mt-10">
                 <ul className="space-y-2 font-mono text-sm text-gray-600">
-                   <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>HubSpot Architecture</li>
-                   <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Salesforce Integration</li>
-                   <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Segment CDP Implementation</li>
+                   <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Google Analytics 4 (Expert)</li>
+                   <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>SQL / Data Warehousing</li>
+                   <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Mixpanel / Amplitude</li>
                 </ul>
-              </Reveal>
-              <Reveal delay={0.5}>
-                <div className="md:mt-10">
-                  <ul className="space-y-2 font-mono text-sm text-gray-600">
-                     <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Google Analytics 4 (Expert)</li>
-                     <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>SQL / Data Warehousing</li>
-                     <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-red mr-2"></span>Mixpanel / Amplitude</li>
-                  </ul>
-                </div>
-              </Reveal>
+              </div>
             </div>
           </div>
 
