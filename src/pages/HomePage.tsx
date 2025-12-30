@@ -8,6 +8,7 @@ import TechnologyShowcase from '../components/home/TechnologyShowcase';
 import ROICounter from '../components/home/ROICounter';
 import OtherClients from '../components/home/OtherClients';
 import CTASection from '../components/home/CTASection';
+import Reveal from '../components/Reveal';
 
 const HomePage = () => {
   // Sample reviews for structured data
@@ -51,12 +52,30 @@ const HomePage = () => {
         structuredData={combinedSchema}
       />
       <HeroSection />
-      <ClientResults />
-      <ServicesOverview />
-      <TechnologyShowcase />
-      <ROICounter />
-      <OtherClients />
-      <CTASection />
+      
+      <Reveal>
+        <ClientResults />
+      </Reveal>
+      
+      <Reveal>
+        <ServicesOverview />
+      </Reveal>
+      
+      <Reveal>
+        <TechnologyShowcase />
+      </Reveal>
+      
+      <Reveal>
+        <ROICounter />
+      </Reveal>
+      
+      <Reveal>
+        <OtherClients />
+      </Reveal>
+      
+      <Reveal>
+        <CTASection />
+      </Reveal>
     </div>
   );
 };

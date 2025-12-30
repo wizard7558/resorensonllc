@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -17,16 +18,18 @@ const AnimatedRoutes = () => {
   const location = useLocation();
   
   return (
-    <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<PageWrapper><HomePage /></PageWrapper>} />
-      <Route path="/services" element={<PageWrapper><ServicesPage /></PageWrapper>} />
-      <Route path="/about" element={<PageWrapper><AboutPage /></PageWrapper>} />
-      <Route path="/blog" element={<PageWrapper><BlogPage /></PageWrapper>} />
-      <Route path="/blog/:slug" element={<PageWrapper><BlogPostPage /></PageWrapper>} />
-      <Route path="/contact" element={<PageWrapper><ContactPage /></PageWrapper>} />
-      <Route path="/assessment" element={<PageWrapper><AssessmentPage /></PageWrapper>} />
-      <Route path="/landing" element={<PageWrapper><LandingPage /></PageWrapper>} />
-    </Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<PageWrapper><HomePage /></PageWrapper>} />
+        <Route path="/services" element={<PageWrapper><ServicesPage /></PageWrapper>} />
+        <Route path="/about" element={<PageWrapper><AboutPage /></PageWrapper>} />
+        <Route path="/blog" element={<PageWrapper><BlogPage /></PageWrapper>} />
+        <Route path="/blog/:slug" element={<PageWrapper><BlogPostPage /></PageWrapper>} />
+        <Route path="/contact" element={<PageWrapper><ContactPage /></PageWrapper>} />
+        <Route path="/assessment" element={<PageWrapper><AssessmentPage /></PageWrapper>} />
+        <Route path="/landing" element={<PageWrapper><LandingPage /></PageWrapper>} />
+      </Routes>
+    </AnimatePresence>
   );
 };
 

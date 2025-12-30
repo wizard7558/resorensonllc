@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Terminal } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,9 +22,13 @@ const Header = () => {
           
           {/* Logo Area */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="bg-brand-dark text-white p-1.5 transition-colors group-hover:bg-brand-red">
+            <motion.div 
+              whileHover={{ rotate: 180 }}
+              transition={{ duration: 0.3 }}
+              className="bg-brand-dark text-white p-1.5 transition-colors group-hover:bg-brand-red"
+            >
                <Terminal size={20} />
-            </div>
+            </motion.div>
             <img
               src="/logo_v2.svg"
               alt="Lattara"
@@ -34,28 +39,34 @@ const Header = () => {
           {/* Desktop Nav - Monospace & Technical */}
           <nav className="hidden md:flex space-x-1">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`px-4 py-2 text-sm font-mono transition-all duration-200 border border-transparent ${
-                  location.pathname === item.path
-                    ? 'text-brand-red border-b-brand-red bg-red-50/50'
-                    : 'text-gray-600 hover:text-brand-dark hover:border-gray-200'
-                }`}
-              >
-                {item.name}
-              </Link>
+              <motion.div key={item.name} whileHover={{ y: -2 }}>
+                <Link
+                  to={item.path}
+                  className={`px-4 py-2 text-sm font-mono transition-all duration-200 border border-transparent ${
+                    location.pathname === item.path
+                      ? 'text-brand-red border-b-brand-red bg-red-50/50'
+                      : 'text-gray-600 hover:text-brand-dark hover:border-gray-200'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              </motion.div>
             ))}
           </nav>
 
           {/* CTA Button - Sharp & High Contrast */}
           <div className="hidden md:flex items-center">
-            <Link
-              to="/assessment"
-              className="bg-brand-dark text-white px-6 py-2.5 text-sm font-mono hover:bg-brand-red transition-colors border border-transparent hover:border-red-800 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[1px] hover:translate-y-[1px]"
+            <motion.div
+              whileHover={{ x: 2, y: 2 }}
+              whileTap={{ scale: 0.98 }}
             >
-              Start_Assessment
-            </Link>
+              <Link
+                to="/assessment"
+                className="bg-brand-dark text-white px-6 py-2.5 text-sm font-mono hover:bg-brand-red transition-colors border border-transparent hover:border-red-800 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-none"
+              >
+                Start_Assessment
+              </Link>
+            </motion.div>
           </div>
 
           <button
@@ -69,7 +80,11 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-b border-gray-200">
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="md:hidden bg-white border-b border-gray-200"
+        >
           <div className="px-4 pt-2 pb-6 space-y-2">
             {navItems.map((item) => (
               <Link
@@ -89,7 +104,7 @@ const Header = () => {
               Start_Assessment
             </Link>
           </div>
-        </div>
+        </motion.div>
       )}
     </header>
   );
