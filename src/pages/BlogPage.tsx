@@ -90,36 +90,34 @@ const BlogPage = () => {
             
             {/* Featured Post */}
             {blogPosts.filter(post => post.featured).map((post, index) => (
-              <div key={index} className="lg:col-span-2 group cursor-pointer">
-                <Reveal>
-                  <motion.div 
-                    whileHover={{ y: -4 }}
-                    className="border border-gray-200 bg-white p-8 h-full hover:border-brand-red transition-all duration-300 relative cursor-pointer"
-                  >
-                    <div className="absolute top-0 right-0 bg-brand-red text-white text-xs font-mono px-3 py-1">
-                       FEATURED_ENTRY
-                    </div>
-                    
-                    <div className="flex items-center space-x-4 mb-6 text-xs font-mono text-gray-400">
-                       <span>{new Date(post.date).toISOString().split('T')[0]}</span>
-                       <span>//</span>
-                       <span className="text-brand-red">{post.category}</span>
-                    </div>
+              <div key={index} className="lg:col-span-2 group">
+                <motion.div 
+                  whileHover={{ y: -4 }}
+                  className="border border-gray-200 bg-white p-8 h-full hover:border-brand-red transition-all duration-300 relative cursor-pointer"
+                >
+                  <div className="absolute top-0 right-0 bg-brand-red text-white text-xs font-mono px-3 py-1">
+                     FEATURED_ENTRY
+                  </div>
+                  
+                  <div className="flex items-center space-x-4 mb-6 text-xs font-mono text-gray-400">
+                     <span>{new Date(post.date).toISOString().split('T')[0]}</span>
+                     <span>//</span>
+                     <span className="text-brand-red">{post.category}</span>
+                  </div>
 
-                    <h2 className="text-3xl font-bold text-brand-dark mb-4 group-hover:text-brand-red transition-colors">
-                      <Link to={`/blog/${post.slug}`} className="block">{post.title}</Link>
-                    </h2>
-                    
-                    <p className="text-gray-600 text-lg leading-relaxed mb-8 font-light">
-                      {post.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center text-xs font-mono text-gray-500 border-t border-gray-100 pt-4">
-                      <Clock size={14} className="mr-2" />
-                      {post.readTime}
-                    </div>
-                  </motion.div>
-                </Reveal>
+                  <h2 className="text-3xl font-bold text-brand-dark mb-4 group-hover:text-brand-red transition-colors">
+                    <Link to={`/blog/${post.slug}`} className="block">{post.title}</Link>
+                  </h2>
+                  
+                  <p className="text-gray-600 text-lg leading-relaxed mb-8 font-light">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center text-xs font-mono text-gray-500 border-t border-gray-100 pt-4">
+                    <Clock size={14} className="mr-2" />
+                    {post.readTime}
+                  </div>
+                </motion.div>
               </div>
             ))}
 

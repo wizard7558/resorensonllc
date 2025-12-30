@@ -131,8 +131,8 @@ const ServicesPage = () => {
       {/* Service Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 gap-16">
-          {services.map((service, index) => (
-            <Reveal key={index} delay={index * 0.1}>
+          {services.map((service, index) => {
+            const content = (
               <div className="group grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-100 pb-16 last:border-0">
                 
                 {/* Left: Icon & Meta */}
@@ -182,8 +182,16 @@ const ServicesPage = () => {
                 </div>
 
               </div>
-            </Reveal>
-          ))}
+            );
+
+            return index === 0 ? (
+              <div key={index}>{content}</div>
+            ) : (
+              <Reveal key={index} delay={index * 0.1}>
+                {content}
+              </Reveal>
+            );
+          })}
         </div>
       </div>
 
