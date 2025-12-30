@@ -20,7 +20,7 @@ const AboutPage = () => {
                 <div className="absolute top-4 left-4 w-full h-full border-2 border-brand-red/20 z-0"></div>
                 {/* Replace with actual image path if available, utilizing placeholder logic for now */}
                 <div className="relative z-10 bg-gray-100 aspect-[4/5] border border-gray-200 flex items-center justify-center overflow-hidden">
-                   <img src="/ChatGPT Image Jul 15, 2025, 09_08_10 AM.png" alt="Riley Sorenson" className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-500" />
+                   <img src="/RS Headshot.jpeg" alt="Riley Sorenson" className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-500" />
                 </div>
              </div>
              
