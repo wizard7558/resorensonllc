@@ -106,8 +106,11 @@ const ServicesPage = () => {
       />
 
       {/* Header */}
-      <div className="bg-gray-50 border-b border-gray-200 py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative bg-gray-50 border-b border-gray-200 py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern bg-[size:40px_40px] opacity-[0.5]" />
+        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-brand-red/5 blur-[80px] rounded-full pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center space-x-2 text-brand-red font-mono text-sm mb-6">
                <Terminal size={16} />

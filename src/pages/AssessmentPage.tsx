@@ -274,15 +274,20 @@ const AssessmentPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white py-20 font-mono">
+    <div className="relative min-h-screen bg-white py-20 font-mono overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern bg-[size:40px_40px] opacity-[0.3]" />
+      <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="w-full h-[2px] bg-brand-red/10 shadow-[0_0_20px_rgba(157,34,53,0.2)] animate-scan" />
+      </div>
+
       <SEO
         title="System Diagnostics | Lattara"
         description="Initialize system audit."
         canonicalUrl="/assessment"
         ogType="website"
       />
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 border-b border-gray-200 pb-8">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="mb-12 border-b border-gray-200 pb-8 bg-white/80 backdrop-blur-sm p-6 border border-gray-100 shadow-sm">
           <div className="inline-block bg-brand-red/10 text-brand-red text-xs px-2 py-1 mb-4">
              SYS_ADMIN_TOOL
           </div>

@@ -4,14 +4,17 @@ import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 
 const ContactPage = () => {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="relative bg-gray-50 min-h-screen overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern bg-[size:40px_40px] opacity-[0.4]" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-red/5 blur-[120px] rounded-full pointer-events-none" />
+
       <SEO 
         title="Contact Lattara" 
         description="Get in touch for MarTech consulting and revenue operations optimization."
         canonicalUrl="/contact"
       />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block border border-brand-red/20 bg-red-50 text-brand-red px-3 py-1 text-xs font-mono mb-6">

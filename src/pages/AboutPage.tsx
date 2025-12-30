@@ -4,14 +4,17 @@ import { Terminal, Award, Code, Database } from 'lucide-react';
 
 const AboutPage = () => {
   return (
-    <div className="bg-white">
+    <div className="relative bg-white overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern bg-[size:40px_40px] opacity-[0.3]" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-red/5 blur-[100px] rounded-full pointer-events-none" />
+
       <SEO 
         title="About Riley Sorenson | MarTech Architect" 
         description="Riley Sorenson is a MarTech expert and Revenue Operations architect specializing in data infrastructure and analytics."
         canonicalUrl="/about"
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Left Column: Image/Profile */}
