@@ -1,0 +1,10 @@
+<svg width="200" height="40" viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&amp;display=swap');
+  </style>
+  
+  <text x="0" y="28" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="28" fill="#0F172A" letter-spacing="-0.02em">LATTARA</text>
+  
+  <line x1="0" y1="36" x2="135" y2="36" stroke="#9D2235" stroke-width="2" />
+  <rect x="135" y="30" width="8" height="8" fill="#9D2235" />
+</svg>
