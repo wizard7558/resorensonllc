@@ -36,7 +36,7 @@ const AboutPage = () => {
                      <Code className="text-brand-red" size={20} />
                      <div>
                         <p className="text-xs font-mono text-gray-500">CORE_COMPETENCY</p>
-                        <p className="font-bold text-sm text-brand-dark">Full-Stack Data Arch</p>
+                        <p className="font-bold text-sm text-brand-dark">Full-Stack Data Architect</p>
                      </div>
                   </div>
                 </Reveal>
