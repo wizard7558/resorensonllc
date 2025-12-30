@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
-import { CheckCircle, AlertCircle, ArrowRight, BarChart3 } from 'lucide-react';
+import { CheckCircle, AlertCircle, ArrowRight, BarChart3, Terminal, Cpu } from 'lucide-react';
 
 // Declare gtag function for TypeScript
 declare global {
@@ -18,62 +18,62 @@ const AssessmentPage = () => {
   const questions = [
     {
       id: 'company_size',
-      question: 'What is your company size?',
+      question: 'INPUT_PARAM: COMPANY_SCALE',
       options: [
-        { value: 'startup', label: 'Startup (1-10 employees)' },
-        { value: 'small', label: 'Small (11-50 employees)' },
-        { value: 'medium', label: 'Medium (51-250 employees)' },
-        { value: 'large', label: 'Large (250+ employees)' }
+        { value: 'startup', label: 'Startup (1-10 nodes)' },
+        { value: 'small', label: 'Small (11-50 nodes)' },
+        { value: 'medium', label: 'Medium (51-250 nodes)' },
+        { value: 'large', label: 'Large (250+ nodes)' }
       ]
     },
     {
       id: 'current_tools',
-      question: 'How many marketing tools do you currently use?',
+      question: 'INPUT_PARAM: STACK_VOLUME',
       options: [
-        { value: '1-3', label: '1-3 tools' },
-        { value: '4-8', label: '4-8 tools' },
-        { value: '9-15', label: '9-15 tools' },
-        { value: '16+', label: '16+ tools' }
+        { value: '1-3', label: '1-3 platforms' },
+        { value: '4-8', label: '4-8 platforms' },
+        { value: '9-15', label: '9-15 platforms' },
+        { value: '16+', label: '16+ platforms' }
       ]
     },
     {
       id: 'data_integration',
-      question: 'How well integrated are your marketing tools?',
+      question: 'DIAGNOSTIC: INTEGRATION_LEVEL',
       options: [
-        { value: 'not_integrated', label: 'Not integrated at all' },
-        { value: 'partially', label: 'Partially integrated' },
-        { value: 'mostly', label: 'Mostly integrated' },
-        { value: 'fully', label: 'Fully integrated' }
+        { value: 'not_integrated', label: 'CRITICAL: No Integration' },
+        { value: 'partially', label: 'WARNING: Partial Sync' },
+        { value: 'mostly', label: 'STANDARD: Mostly Integrated' },
+        { value: 'fully', label: 'OPTIMAL: Fully Unified' }
       ]
     },
     {
       id: 'lead_tracking',
-      question: 'Can you track leads from first touch to closed deal?',
+      question: 'DIAGNOSTIC: ATTRIBUTION_VISIBILITY',
       options: [
-        { value: 'no_tracking', label: 'No tracking in place' },
-        { value: 'basic', label: 'Basic tracking' },
-        { value: 'good', label: 'Good tracking with some gaps' },
-        { value: 'excellent', label: 'Excellent end-to-end tracking' }
+        { value: 'no_tracking', label: 'BLIND: No Tracking' },
+        { value: 'basic', label: 'LOW: First-Touch Only' },
+        { value: 'good', label: 'MED: Multi-Touch (Gaps)' },
+        { value: 'excellent', label: 'HIGH: Full Lifecycle' }
       ]
     },
     {
       id: 'reporting',
-      question: 'How do you currently measure marketing ROI?',
+      question: 'METRIC: ROI_MEASUREMENT',
       options: [
-        { value: 'no_measurement', label: 'No measurement in place' },
-        { value: 'basic_metrics', label: 'Basic metrics (clicks, opens)' },
-        { value: 'revenue_attribution', label: 'Revenue attribution tracking' },
-        { value: 'advanced_analytics', label: 'Advanced analytics & modeling' }
+        { value: 'no_measurement', label: 'NONE: Gut Feel' },
+        { value: 'basic_metrics', label: 'BASIC: Vanity Metrics' },
+        { value: 'revenue_attribution', label: 'ADVANCED: Rev Attribution' },
+        { value: 'advanced_analytics', label: 'EXPERT: Predictive Models' }
       ]
     },
     {
       id: 'biggest_challenge',
-      question: 'What is your biggest MarTech challenge?',
+      question: 'PRIORITY: PRIMARY_BOTTLENECK',
       options: [
-        { value: 'data_silos', label: 'Data silos between tools' },
-        { value: 'attribution', label: 'Attribution and tracking' },
-        { value: 'automation', label: 'Automation and workflows' },
-        { value: 'reporting', label: 'Reporting and analytics' }
+        { value: 'data_silos', label: 'ERR_SILOS: Data Fragmentation' },
+        { value: 'attribution', label: 'ERR_BLIND: Attribution Gaps' },
+        { value: 'automation', label: 'ERR_MANUAL: Lack of Auto' },
+        { value: 'reporting', label: 'ERR_VIS: Poor Visibility' }
       ]
     }
   ];
@@ -133,42 +133,45 @@ const AssessmentPage = () => {
     
     if (score < 40) {
       return {
-        level: 'Foundation',
-        color: 'text-red-400',
-        bgColor: 'bg-red-400/10',
+        level: 'CRITICAL_INFRASTRUCTURE',
+        color: 'text-red-500',
+        bgColor: 'bg-red-50',
+        borderColor: 'border-red-200',
         recommendations: [
-          'Start with basic tool integration (HubSpot + Salesforce)',
-          'Implement fundamental lead tracking',
-          'Set up basic reporting dashboards',
-          'Focus on data governance and cleanup'
+          'INIT_PROTOCOL: Basic Tool Integration (HubSpot + Salesforce)',
+          'DEPLOY: Fundamental Lead Tracking',
+          'CONFIG: Basic Reporting Dashboards',
+          'EXEC: Data Governance Cleanup'
         ],
-        nextSteps: 'Begin with a comprehensive MarTech audit to identify quick wins and foundational improvements.'
+        nextSteps: 'SYSTEM ALERT: Immediate audit required to identify foundational gaps.'
       };
     } else if (score < 70) {
       return {
-        level: 'Growth',
-        color: 'text-yellow-400',
-        bgColor: 'bg-yellow-400/10',
+        level: 'OPTIMIZATION_REQUIRED',
+        color: 'text-yellow-600',
+        bgColor: 'bg-yellow-50',
+        borderColor: 'border-yellow-200',
         recommendations: [
-          'Implement advanced attribution modeling',
-          'Automate lead scoring and routing',
-          'Expand integration capabilities',
-          'Develop custom reporting workflows'
+          'UPGRADE: Attribution Modeling v2',
+          'AUTO: Lead Scoring & Routing',
+          'EXPAND: Integration Capabilities',
+          'DEV: Custom Reporting Workflows'
         ],
-        nextSteps: 'Focus on automation and advanced analytics to scale your marketing operations efficiently.'
+        nextSteps: 'WARNING: Scaling inefficiencies detected. Focus on automation.'
       };
     } else {
       return {
-        level: 'Optimization',
-        color: 'text-green-400',
-        bgColor: 'bg-green-400/10',
+        level: 'SYSTEM_OPTIMAL',
+        color: 'text-green-600',
+        bgColor: 'bg-green-50',
+        borderColor: 'border-green-200',
         recommendations: [
-          'Implement predictive analytics',
-          'Advanced personalization engines',
-          'AI-powered optimization',
-          'Enterprise-grade data architecture'
+          'DEPLOY: Predictive Analytics',
+          'SCALE: Personalization Engines',
+          'AI: Optimization Models',
+          'ARCH: Enterprise Data Grid'
         ],
-        nextSteps: 'Leverage advanced technologies and AI to maximize your marketing technology investment.'
+        nextSteps: 'STATUS: System stable. Ready for advanced scale measures.'
       };
     }
   };
@@ -178,81 +181,90 @@ const AssessmentPage = () => {
     const recommendations = getRecommendations();
 
     return (
-      <div className="min-h-screen bg-white py-20">
+      <div className="min-h-screen bg-white py-20 font-mono">
         <SEO
-          title="Your MarTech Assessment Results | Optimization Recommendations"
-          description="Your personalized MarTech stack assessment results with specific optimization recommendations and ROI projections. Get actionable insights for your marketing technology."
-          keywords="martech assessment results, marketing technology audit, martech optimization recommendations, marketing stack analysis"
+          title="System Audit Results | Lattara"
+          description="Your personalized MarTech stack assessment results."
           canonicalUrl="/assessment"
           noIndex={true}
         />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Your MarTech Assessment Results
-            </h1>
-          </div>
-
-          {/* Score Display */}
-          <div className={`${recommendations.bgColor} rounded-lg p-8 mb-8 text-center`}>
-            <div className="text-6xl font-bold text-gray-900 mb-4">{score}%</div>
-            <div className={`text-xl font-semibold ${recommendations.color} mb-2`}>
-              {recommendations.level} Level
+          <div className="border border-gray-200 bg-white p-8 mb-8 relative overflow-hidden">
+             <div className="absolute top-0 left-0 w-full h-1 bg-brand-dark"></div>
+             
+            <div className="flex justify-between items-start mb-8 border-b border-gray-100 pb-4">
+               <div>
+                  <h1 className="text-2xl font-bold text-brand-dark uppercase tracking-tight">
+                    System_Audit_Report
+                  </h1>
+                  <p className="text-xs text-gray-500 mt-1">ID: {Math.random().toString(36).substr(2, 9).toUpperCase()}</p>
+               </div>
+               <div className="text-right">
+                  <div className="text-xs text-gray-400">TIMESTAMP</div>
+                  <div className="text-sm text-brand-dark">{new Date().toISOString().split('T')[0]}</div>
+               </div>
             </div>
-            <p className="text-gray-600">
-              Your MarTech stack optimization score
-            </p>
-          </div>
 
-          {/* Recommendations */}
-          <div className="bg-gray-50 rounded-lg border border-gray-200 p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Recommended Actions</h2>
-            <div className="space-y-4">
-              {recommendations.recommendations.map((rec, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#9D2235' }} />
-                  <span className="text-gray-600">{rec}</span>
-                </div>
-              ))}
+            {/* Score Display */}
+            <div className={`p-8 mb-8 border ${recommendations.borderColor} ${recommendations.bgColor} relative`}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                 <div>
+                    <div className="text-xs text-gray-500 mb-1">OPTIMIZATION_INDEX</div>
+                    <div className="text-6xl font-bold text-brand-dark mb-2">{score}<span className="text-2xl text-gray-400">/100</span></div>
+                    <div className={`text-sm font-bold ${recommendations.color} border px-2 py-1 inline-block bg-white/50 border-current`}>
+                       {recommendations.level}
+                    </div>
+                 </div>
+                 <div className="space-y-2 text-xs text-gray-600">
+                    <div className="flex justify-between border-b border-gray-200/50 pb-1">
+                       <span>INFRASTRUCTURE_HEALTH</span>
+                       <span className="font-bold">{score > 50 ? 'STABLE' : 'UNSTABLE'}</span>
+                    </div>
+                    <div className="flex justify-between border-b border-gray-200/50 pb-1">
+                       <span>DATA_INTEGRITY</span>
+                       <span className="font-bold">{score > 70 ? 'HIGH' : 'RISK'}</span>
+                    </div>
+                 </div>
+              </div>
             </div>
-          </div>
 
-          {/* Next Steps */}
-          <div className="bg-gray-50 rounded-lg border border-gray-200 p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Next Steps</h2>
-            <p className="text-gray-600 mb-6">{recommendations.nextSteps}</p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/contact"
-                className="text-white px-8 py-3 rounded-lg font-medium transition-colors hover:opacity-90 flex items-center justify-center space-x-2"
-                style={{ backgroundColor: '#9D2235' }}
-              >
-                <span>Schedule Free Consultation</span>
-                <ArrowRight size={20} />
-              </Link>
+            {/* Recommendations */}
+            <div className="mb-8">
+              <h2 className="text-sm font-bold text-gray-900 uppercase mb-4 flex items-center">
+                 <Terminal size={16} className="mr-2 text-brand-red" />
+                 Required_Patches
+              </h2>
+              <div className="grid grid-cols-1 gap-px bg-gray-200 border border-gray-200">
+                {recommendations.recommendations.map((rec, index) => (
+                  <div key={index} className="flex items-center space-x-3 p-4 bg-white">
+                    <span className="text-brand-red font-bold text-xs">{`0${index + 1}`}</span>
+                    <span className="text-gray-700 text-sm">{rec}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Next Steps */}
+            <div className="bg-brand-dark text-white p-8">
+              <h2 className="text-sm font-bold text-white uppercase mb-4 flex items-center">
+                 <Cpu size={16} className="mr-2 text-brand-red" />
+                 System_Instruction
+              </h2>
+              <p className="text-gray-400 mb-8 text-sm font-light border-l-2 border-brand-red pl-4">
+                 {recommendations.nextSteps}
+              </p>
               
-              <button className="border border-gray-300 hover:border-gray-400 text-gray-600 hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-colors">
-                Download Detailed Report
-              </button>
-            </div>
-          </div>
-
-          {/* ROI Projection */}
-          <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-lg p-8 border border-gray-200">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Projected ROI</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-2xl font-bold" style={{ color: '#9D2235' }}>3-6 months</div>
-                <div className="text-gray-600">Implementation Time</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold" style={{ color: '#9D2235' }}>200-400%</div>
-                <div className="text-gray-600">ROI Improvement</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold" style={{ color: '#9D2235' }}>35-60%</div>
-                <div className="text-gray-600">Efficiency Gain</div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/contact"
+                  className="bg-brand-red text-white px-6 py-3 text-sm font-mono hover:bg-red-700 transition-colors text-center"
+                >
+                  SCHEDULE_DIAGNOSTIC
+                </Link>
+                
+                <button className="border border-gray-600 text-gray-300 hover:border-white hover:text-white px-6 py-3 text-sm font-mono transition-colors">
+                  DOWNLOAD_LOGS
+                </button>
               </div>
             </div>
           </div>
@@ -262,83 +274,82 @@ const AssessmentPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white py-20">
+    <div className="min-h-screen bg-white py-20 font-mono">
       <SEO
-        title="Free MarTech Stack Assessment | Discover Optimization Opportunities"
-        description="Take our free MarTech assessment to discover optimization opportunities in your marketing technology stack. Get personalized recommendations and ROI projections."
-        keywords="free martech assessment, marketing technology audit, martech stack evaluation, marketing automation assessment, hubspot assessment"
+        title="System Diagnostics | Lattara"
+        description="Initialize system audit."
         canonicalUrl="/assessment"
         ogType="website"
       />
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            MarTech Stack Assessment
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 border-b border-gray-200 pb-8">
+          <div className="inline-block bg-brand-red/10 text-brand-red text-xs px-2 py-1 mb-4">
+             SYS_ADMIN_TOOL
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4 tracking-tight">
+            Infrastructure Audit
           </h1>
-          <p className="text-xl text-gray-600">
-            Discover optimization opportunities in your marketing technology stack
+          <p className="text-gray-500">
+            Initialize diagnostic sequence to identify stack inefficiencies.
           </p>
         </div>
 
-        {/* Progress Bar */}
+        {/* Progress Bar - Segmented */}
         <div className="mb-8">
-          <div className="flex justify-between items-center mb-2">
-            <span className="text-gray-600">Progress</span>
-            <span className="text-gray-600">
-              {currentStep + 1} of {questions.length}
+          <div className="flex justify-between items-center mb-2 text-xs text-gray-400">
+            <span>SEQUENCE_PROGRESS</span>
+            <span>
+              {currentStep + 1}/{questions.length}
             </span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2">
-            <div 
-              className="h-2 rounded-full transition-all duration-300"
-              style={{ backgroundColor: '#9D2235', width: `${((currentStep + 1) / questions.length) * 100}%` }}
-            />
+          <div className="flex gap-1">
+             {questions.map((_, idx) => (
+                <div 
+                  key={idx}
+                  className={`h-1 flex-1 transition-all duration-300 ${
+                     idx <= currentStep ? 'bg-brand-red' : 'bg-gray-100'
+                  }`}
+                />
+             ))}
           </div>
         </div>
 
-        {/* Question */}
-        <div className="bg-gray-50 rounded-lg border border-gray-200 p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">
+        {/* Question Interface */}
+        <div className="border border-gray-200 p-8 hover:border-brand-dark transition-colors duration-500">
+          <h2 className="text-xl font-bold text-brand-dark mb-8 flex items-center">
+            <span className="text-brand-red mr-2">&gt;</span>
             {questions[currentStep].question}
           </h2>
           
-          <div className="space-y-4">
+          <div className="space-y-3">
             {questions[currentStep].options.map((option, index) => (
               <button
                 key={index}
                 onClick={() => handleAnswer(option.value)}
-                className="w-full text-left p-4 rounded-lg border border-gray-300 hover:border-red-500 hover:bg-red-50 transition-all duration-200 text-gray-600 hover:text-gray-900"
+                className="w-full text-left p-4 border border-gray-200 hover:border-brand-red hover:bg-gray-50 transition-all duration-200 text-gray-600 hover:text-brand-dark group flex items-center justify-between"
               >
-                {option.label}
+                <span className="text-sm">{option.label}</span>
+                <span className="opacity-0 group-hover:opacity-100 text-brand-red text-xs transition-opacity">[SELECT]</span>
               </button>
             ))}
           </div>
         </div>
 
-        {/* Benefits */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gray-50 rounded-lg border border-gray-200 p-6 text-center">
-            <BarChart3 className="h-8 w-8 mx-auto mb-3" style={{ color: '#9D2235' }} />
-            <h3 className="font-semibold text-gray-900 mb-2">Free Analysis</h3>
-            <p className="text-gray-600 text-sm">
-              Comprehensive assessment with no cost or obligation
-            </p>
+        {/* Footer Metrics */}
+        <div className="mt-12 grid grid-cols-3 gap-px bg-gray-200 border border-gray-200">
+          <div className="bg-white p-4 text-center">
+            <div className="text-brand-red font-bold text-lg mb-1">0.00</div>
+            <div className="text-xs text-gray-400">COST_BASIS</div>
           </div>
           
-          <div className="bg-gray-50 rounded-lg border border-gray-200 p-6 text-center">
-            <CheckCircle className="h-8 w-8 mx-auto mb-3" style={{ color: '#9D2235' }} />
-            <h3 className="font-semibold text-gray-900 mb-2">Actionable Insights</h3>
-            <p className="text-gray-600 text-sm">
-              Specific recommendations tailored to your business
-            </p>
+          <div className="bg-white p-4 text-center">
+            <div className="text-brand-dark font-bold text-lg mb-1">LOGIC</div>
+            <div className="text-xs text-gray-400">ENGINE</div>
           </div>
           
-          <div className="bg-gray-50 rounded-lg border border-gray-200 p-6 text-center">
-            <AlertCircle className="h-8 w-8 mx-auto mb-3" style={{ color: '#9D2235' }} />
-            <h3 className="font-semibold text-gray-900 mb-2">ROI Projections</h3>
-            <p className="text-gray-600 text-sm">
-              Estimated impact and timeline for improvements
-            </p>
+          <div className="bg-white p-4 text-center">
+             <div className="text-brand-dark font-bold text-lg mb-1">SECURE</div>
+             <div className="text-xs text-gray-400">CONNECTION</div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import SEO from '../components/SEO';
-import { Calendar, Clock, ArrowRight, TrendingUp } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, TrendingUp, Terminal, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const BlogPage = () => {
@@ -9,48 +9,48 @@ const BlogPage = () => {
       title: 'GA4 Migration: Complete Implementation Guide for B2B Companies',
       excerpt: 'Step-by-step guide to migrating from Universal Analytics to GA4 without losing historical data or breaking your attribution models.',
       date: '2025-01-15',
-      readTime: '12 min read',
-      category: 'Web Analytics',
+      readTime: '12 MIN_READ',
+      category: 'WEB_ANALYTICS',
       featured: true
     },
     {
       title: 'The MarTech Stack Audit: 15 Critical Questions Every CMO Should Ask',
       excerpt: 'Comprehensive checklist for evaluating your marketing technology stack effectiveness and identifying optimization opportunities.',
       date: '2025-01-10',
-      readTime: '8 min read',
-      category: 'Strategy'
+      readTime: '08 MIN_READ',
+      category: 'STRATEGY'
     },
     {
       title: 'HubSpot to Salesforce Integration: Common Pitfalls and Solutions',
       excerpt: 'Avoid the most common mistakes when connecting HubSpot and Salesforce. Real-world examples and proven solutions.',
       date: '2025-01-05',
-      readTime: '10 min read',
-      category: 'Integration'
+      readTime: '10 MIN_READ',
+      category: 'INTEGRATION'
     },
     {
       title: 'Data Governance in MarTech: Building Trust in Your Customer Data',
       excerpt: 'Essential framework for implementing data governance policies that ensure data quality and compliance across your MarTech stack.',
       date: '2025-01-01',
-      readTime: '15 min read',
-      category: 'Data Management'
+      readTime: '15 MIN_READ',
+      category: 'DATA_MANAGEMENT'
     },
     {
       title: 'Attribution Modeling Beyond First-Touch: Advanced Strategies',
       excerpt: 'Move beyond basic attribution with custom models that accurately reflect your customer journey and marketing impact.',
       date: '2024-12-28',
-      readTime: '11 min read',
-      category: 'Analytics'
+      readTime: '11 MIN_READ',
+      category: 'ANALYTICS'
     },
     {
       title: 'Marketo vs Pardot vs HubSpot: 2025 Platform Comparison',
       excerpt: 'In-depth comparison of leading marketing automation platforms with recommendations based on company size and use cases.',
       date: '2024-12-20',
-      readTime: '18 min read',
-      category: 'Platform Review'
+      readTime: '18 MIN_READ',
+      category: 'PLATFORM_REVIEW'
     }
   ];
 
-  const categories = ['All', 'Strategy', 'Web Analytics', 'Integration', 'Data Management', 'Analytics', 'Platform Review'];
+  const categories = ['ALL', 'STRATEGY', 'WEB_ANALYTICS', 'INTEGRATION', 'DATA_MANAGEMENT', 'ANALYTICS', 'PLATFORM_REVIEW'];
 
   // HubSpot form embed
   useEffect(() => {
@@ -66,200 +66,188 @@ const BlogPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="MarTech Strategy Blog | Analytics, Attribution & Automation Insights"
-        description="Expert insights on MarTech optimization, GA4 implementation, attribution modeling, and marketing automation. Strategic guides for B2B marketing technology."
-        keywords="martech blog, ga4 migration, attribution modeling, marketing automation, hubspot tips, salesforce integration, data governance, martech strategy"
+        title="Engineering Logs | MarTech Insights"
+        description="Technical guides and strategic insights for marketing infrastructure."
+        keywords="martech blog, ga4 migration, attribution modeling, marketing automation"
         canonicalUrl="/blog"
         ogType="blog"
       />
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100">
+      
+      {/* Header */}
+      <div className="bg-gray-50 border-b border-gray-200 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              MarTech Insights & Strategies
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Strategic insights, implementation guides, and industry analysis to help you 
-              optimize your marketing technology stack and drive revenue growth.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Signup */}
-      <section className="py-12 bg-gray-100 border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Stay Updated on MarTech Trends
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Get weekly insights on MarTech optimization, new platform features, and industry best practices.
-            </p>
-            
-            {/* HubSpot Newsletter Form */}
-            <div className="max-w-md mx-auto">
-              <div 
-                className="hs-form-frame" 
-                data-region="na1" 
-                data-form-id="6470b071-68f5-4c52-8264-5c83cab75259" 
-                data-portal-id="45832447"
-              ></div>
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center space-x-2 text-brand-red font-mono text-sm mb-6">
+               <Terminal size={16} />
+               <span>SYSTEM_LOGS</span>
             </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-brand-dark mb-6 tracking-tight">
+              Technical Briefs & <br/>
+              Strategic Protocols.
+            </h1>
+            <p className="text-xl text-gray-600 font-light max-w-2xl leading-relaxed">
+              Engineering-grade insights for the modern revenue architect.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Newsletter Signup - Technical Style */}
+      <div className="border-b border-gray-200 bg-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+             <div className="max-w-xl">
+                <h2 className="text-lg font-bold text-brand-dark font-mono uppercase mb-2">
+                   Subscribe_To_Updates
+                </h2>
+                <p className="text-gray-600 text-sm">
+                   Receive weekly optimization protocols and system alerts directly to your inbox.
+                </p>
+             </div>
+             <div className="w-full md:w-auto flex-1 max-w-md">
+                {/* HubSpot Newsletter Form Container */}
+                <div 
+                  className="hs-form-frame bg-gray-50 p-4 border border-gray-200" 
+                  data-region="na1" 
+                  data-form-id="6470b071-68f5-4c52-8264-5c83cab75259" 
+                  data-portal-id="45832447"
+                ></div>
+             </div>
+          </div>
+        </div>
+      </div>
 
       {/* Category Filter */}
-      <section className="py-8 bg-gray-100 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-2 justify-center">
+      <div className="border-b border-gray-200 bg-white sticky top-0 z-10 opacity-95 backdrop-blur">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-auto">
+          <div className="flex space-x-6 py-4">
             {categories.map((category) => (
               <button
                 key={category}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  category === 'All'
-                    ? 'text-white'
-                    : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-300'
+                className={`text-xs font-mono whitespace-nowrap transition-colors ${
+                  category === 'ALL'
+                    ? 'text-brand-red font-bold'
+                    : 'text-gray-500 hover:text-brand-dark'
                 }`}
-                style={category === 'All' ? { backgroundColor: '#9D2235' } : {}}
               >
-                {category}
+                [{category}]
               </button>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Blog Posts */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {/* Blog Posts Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
             {/* Featured Post */}
             {blogPosts.filter(post => post.featured).map((post, index) => (
-              <div key={index} className="lg:col-span-2">
-                <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden hover:border-blue-500 transition-all duration-300">
-                  <div className="p-8">
-                    <div className="flex items-center space-x-2 mb-4">
-                      <TrendingUp className="h-5 w-5 text-orange-400" />
-                      <span className="text-orange-400 font-medium">Featured</span>
-                    </div>
-                    
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4 hover:opacity-80 transition-colors" style={{ color: '#9D2235' }}>
-                      <Link to="#" className="block">{post.title}</Link>
-                    </h2>
-                    
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {post.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4 text-gray-500 text-sm">
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="h-4 w-4" />
-                          <span>{new Date(post.date).toLocaleDateString()}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Clock className="h-4 w-4" />
-                          <span>{post.readTime}</span>
-                        </div>
-                      </div>
-                      
-                      <span className="text-white px-3 py-1 rounded-full text-sm" style={{ backgroundColor: '#9D2235' }}>
-                        {post.category}
-                      </span>
-                    </div>
+              <div key={index} className="lg:col-span-2 group cursor-pointer">
+                <div className="border border-gray-200 bg-white p-8 h-full hover:border-brand-red transition-all duration-300 relative">
+                  <div className="absolute top-0 right-0 bg-brand-red text-white text-xs font-mono px-3 py-1">
+                     FEATURED_ENTRY
                   </div>
-                </div>
-              </div>
-            ))}
-
-            {/* Regular Posts */}
-            <div className="space-y-6">
-              {blogPosts.filter(post => !post.featured).slice(0, 3).map((post, index) => (
-                <div key={index} className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 hover:border-blue-500 transition-all duration-300">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3 hover:opacity-80 transition-colors" style={{ color: '#9D2235' }}>
-                    <Link to="#" className="block">{post.title}</Link>
-                  </h3>
                   
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                  <div className="flex items-center space-x-4 mb-6 text-xs font-mono text-gray-400">
+                     <span>{new Date(post.date).toISOString().split('T')[0]}</span>
+                     <span>//</span>
+                     <span className="text-brand-red">{post.category}</span>
+                  </div>
+
+                  <h2 className="text-3xl font-bold text-brand-dark mb-4 group-hover:text-brand-red transition-colors">
+                    <Link to="#" className="block">{post.title}</Link>
+                  </h2>
+                  
+                  <p className="text-gray-600 text-lg leading-relaxed mb-8 font-light">
                     {post.excerpt}
                   </p>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3 text-gray-500 text-xs">
-                      <span>{new Date(post.date).toLocaleDateString()}</span>
-                      <span>{post.readTime}</span>
-                    </div>
-                    
-                    <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
-                      {post.category}
-                    </span>
+                  <div className="flex items-center text-xs font-mono text-gray-500 border-t border-gray-100 pt-4">
+                    <Clock size={14} className="mr-2" />
+                    {post.readTime}
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* All Posts Grid */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.filter(post => !post.featured).slice(3).map((post, index) => (
-              <div key={index} className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 hover:border-blue-500 transition-all duration-300">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3 hover:opacity-80 transition-colors" style={{ color: '#9D2235' }}>
-                  <Link to="#" className="block">{post.title}</Link>
-                </h3>
-                
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  {post.excerpt}
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3 text-gray-500 text-xs">
-                    <span>{new Date(post.date).toLocaleDateString()}</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                  
-                  <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
-                    {post.category}
-                  </span>
                 </div>
               </div>
             ))}
-          </div>
+
+            {/* Regular Posts Column */}
+            <div className="space-y-8">
+              {blogPosts.filter(post => !post.featured).slice(0, 3).map((post, index) => (
+                <div key={index} className="border border-gray-200 bg-white p-6 hover:border-brand-dark transition-all duration-300 group">
+                  <div className="mb-3 text-xs font-mono text-gray-400 flex justify-between">
+                     <span className="text-brand-red">{post.category}</span>
+                     <span>{new Date(post.date).toISOString().split('T')[0]}</span>
+                  </div>
+                  
+                  <h3 className="text-lg font-bold text-brand-dark mb-3 group-hover:text-brand-red transition-colors leading-tight">
+                    <Link to="#" className="block">{post.title}</Link>
+                  </h3>
+                  
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                    {post.excerpt}
+                  </p>
+                  
+                   <div className="text-xs font-mono text-gray-400">
+                      EST_TIME: {post.readTime}
+                   </div>
+                </div>
+              ))}
+            </div>
         </div>
-      </section>
+
+        {/* Remaining Posts Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 pt-12 border-t border-gray-200">
+            {blogPosts.filter(post => !post.featured).slice(3).map((post, index) => (
+              <div key={index} className="border border-gray-200 bg-white p-6 hover:border-brand-dark transition-all duration-300 group">
+                 <div className="mb-3 text-xs font-mono text-gray-400 flex justify-between">
+                     <span className="text-brand-red">{post.category}</span>
+                     <span>{new Date(post.date).toISOString().split('T')[0]}</span>
+                  </div>
+                  
+                  <h3 className="text-lg font-bold text-brand-dark mb-3 group-hover:text-brand-red transition-colors leading-tight">
+                    <Link to="#" className="block">{post.title}</Link>
+                  </h3>
+                  
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                    {post.excerpt}
+                  </p>
+                  
+                   <div className="text-xs font-mono text-gray-400">
+                      EST_TIME: {post.readTime}
+                   </div>
+              </div>
+            ))}
+        </div>
+      </div>
 
       {/* CTA Section */}
-      <section className="py-20" style={{ backgroundColor: '#9D2235' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Need Help Implementing These Strategies?
+      <div className="bg-brand-dark py-20 text-white border-t border-gray-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Need Implementation Support?
           </h2>
-          <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-            Get expert guidance on implementing the strategies discussed in our blog posts. 
-            Schedule a free consultation to discuss your specific needs.
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto font-light">
+            Theory is useful, but execution generates revenue. Our engineering team is ready to deploy these protocols.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-white hover:bg-gray-50 px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
-              style={{ color: '#9D2235' }}
+              className="bg-brand-red text-white px-8 py-3 font-mono text-sm hover:bg-red-700 transition-colors"
             >
-              <span>Schedule Consultation</span>
-              <ArrowRight size={20} />
+              SCHEDULE_CONSULT
             </Link>
             
             <Link
               to="/assessment"
-              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="border border-gray-600 text-gray-300 hover:text-white hover:border-white px-8 py-3 font-mono text-sm transition-colors"
             >
-              Free Assessment
+              RUN_AUDIT
             </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
