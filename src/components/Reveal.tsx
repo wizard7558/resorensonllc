@@ -12,13 +12,13 @@ export const Reveal = ({ children, width = '100%', delay = 0 }: RevealProps) => 
     <div style={{ width, position: 'relative', overflow: 'hidden' }}>
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: 30 },
+          hidden: { opacity: 0, y: 50 },
           visible: { opacity: 1, y: 0 },
         }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.6, ease: "easeOut", delay }}
+        transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1], delay }}
       >
         {children}
       </motion.div>
