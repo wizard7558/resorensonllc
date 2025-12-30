@@ -17,7 +17,7 @@ export const Reveal = ({ children, width = '100%', delay = 0 }: RevealProps) => 
         }}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "0px 0px -33% 0px" }}
+        viewport={{ once: true, margin: "0px 0px -25% 0px" }}
         transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1], delay }}
       >
         {children}
