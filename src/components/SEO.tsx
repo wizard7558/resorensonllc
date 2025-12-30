@@ -17,7 +17,7 @@ const SEO: React.FC<SEOProps> = ({
   description,
   keywords,
   canonicalUrl,
-  ogImage = '/RES Icon Transparent.png',
+  ogImage = '/lattara._t_logo_v2_no_bg.png',
   ogType = 'website',
   structuredData,
   noIndex = false
