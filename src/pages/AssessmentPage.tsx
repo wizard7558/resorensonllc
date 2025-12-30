@@ -267,12 +267,14 @@ const AssessmentPage = () => {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Link
-                      to="/contact"
+                    <a
+                      href="https://meetings.hubspot.com/lattara/meet-with-riley"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-brand-red text-white px-6 py-3 text-sm font-mono hover:bg-red-700 transition-colors text-center"
                     >
                       SCHEDULE_DIAGNOSTIC
-                    </Link>
+                    </a>
                     
                     <button className="border border-gray-600 text-gray-300 hover:border-white hover:text-white px-6 py-3 text-sm font-mono transition-colors">
                       DOWNLOAD_LOGS

@@ -84,9 +84,19 @@ const LeadForm: React.FC<LeadFormProps> = ({ portalId, formId, onSuccess }) => {
         </div>
         <h3 className="text-xl font-bold text-green-800 mb-2 font-mono">TRANSMISSION_RECEIVED</h3>
         <p className="text-sm text-green-700 font-mono mb-6">{message}</p>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-8">
           Our engineering team has received your assessment request. We will analyze your stack and contact you shortly to schedule the review.
         </p>
+        <div className="flex flex-col space-y-4 mb-8">
+           <a 
+              href="https://meetings.hubspot.com/lattara/meet-with-riley"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-dark text-white py-4 px-8 font-bold font-mono text-sm hover:bg-brand-red transition-all flex items-center justify-center shadow-lg"
+           >
+              BOOK_MEETING_NOW <ArrowRight size={18} className="ml-2" />
+           </a>
+        </div>
         <button 
            onClick={() => window.location.reload()}
            className="text-xs font-mono text-gray-400 hover:text-brand-dark underline"

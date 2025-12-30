@@ -193,13 +193,14 @@ const BlogPage = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-brand-red text-white px-8 py-3 font-mono text-sm hover:bg-red-700 transition-colors"
-              >
-                SCHEDULE_CONSULT
-              </Link>
-              
+                          <a
+                            href="https://meetings.hubspot.com/lattara/meet-with-riley"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-brand-red text-white px-8 py-3 font-mono text-sm hover:bg-red-700 transition-colors"
+                          >
+                            SCHEDULE_CONSULT
+                          </a>              
               <Link
                 to="/assessment"
                 className="border border-gray-600 text-gray-300 hover:text-white hover:border-white px-8 py-3 font-mono text-sm transition-colors"

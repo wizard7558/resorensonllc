@@ -176,12 +176,10 @@ const LandingPage = () => {
           </p>
           
           <a
-            href="#assessment-form"
+            href="https://meetings.hubspot.com/lattara/meet-with-riley"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 bg-brand-red hover:bg-red-700 text-white px-8 py-4 font-mono text-sm transition-colors shadow-lg shadow-red-900/20"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector('#assessment-form')?.scrollIntoView({ behavior: 'smooth' });
-            }}
           >
             <span>SCHEDULE_ASSESSMENT</span>
             <ArrowRight size={16} />

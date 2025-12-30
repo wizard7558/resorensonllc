@@ -28,12 +28,14 @@ const CTASection = () => {
             INITIALIZE_AUDIT
             <ArrowRight className="ml-2" size={16} />
           </Link>
-          <Link
-            to="/contact"
+          <a
+            href="https://meetings.hubspot.com/lattara/meet-with-riley"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-white border border-gray-300 text-gray-700 px-8 py-4 text-sm font-mono hover:border-brand-dark hover:text-brand-dark transition-colors"
           >
             CONTACT_ENGINEER
-          </Link>
+          </a>
         </div>
       </div>
     </section>

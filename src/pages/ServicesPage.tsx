@@ -242,12 +242,14 @@ const ServicesPage = () => {
                  >
                     INITIALIZE_ASSESSMENT
                  </Link>
-                 <Link
-                    to="/contact"
+                 <a
+                    href="https://meetings.hubspot.com/lattara/meet-with-riley"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-transparent border border-gray-600 text-white px-8 py-4 text-sm font-mono hover:bg-white hover:text-brand-dark transition-colors"
                  >
                     CONTACT_ENGINEERING
-                 </Link>
+                 </a>
               </div>
             </Reveal>
          </div>
