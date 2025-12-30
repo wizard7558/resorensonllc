@@ -178,6 +178,69 @@ const AssessmentPage = () => {
     }
   };
 
+  const handleDownloadLogs = () => {
+    const score = calculateScore();
+    const recommendations = getRecommendations();
+    const timestamp = new Date().toISOString();
+    
+    let content = `LATTARA_SYSTEM_AUDIT_PLAYBOOK
+===============================
+ID: ${Math.random().toString(36).substr(2, 9).toUpperCase()}
+TIMESTAMP: ${timestamp}
+OPTIMIZATION_SCORE: ${score}/100
+STATUS: ${recommendations.level}
+
+SUMMARY:
+${recommendations.nextSteps}
+
+DIAGNOSTIC_DETAILS:
+-------------------
+`;
+
+    questions.forEach((q) => {
+      const answerValue = answers[q.id];
+      const answerLabel = q.options.find(opt => opt.value === answerValue)?.label || answerValue;
+      content += `[${q.id.toUpperCase()}]
+INPUT: ${answerLabel}
+`;
+      
+      // Add specific logic-based observations
+      if (q.id === 'data_integration' && answerValue === 'not_integrated') {
+        content += `OBSERVATION: Critical data silos detected. High risk of lead leakage and attribution gaps.
+REMEDY: Prioritize CRM-to-Automation sync protocols immediately.
+`;
+      }
+      if (q.id === 'lead_tracking' && answerValue === 'no_tracking') {
+        content += `OBSERVATION: Zero full-funnel visibility. Marketing ROI is currently unmeasurable.
+REMEDY: Deploy UTM capture scripts and lifecycle mapping.
+`;
+      }
+      if (q.id === 'stack_volume' && answerValue === '16+') {
+        content += `OBSERVATION: High tool latency detected. Redundant SaaS spend likely exceeding 30%.
+REMEDY: Execute stack consolidation audit.
+`;
+      }
+      content += '\n';
+    });
+
+    content += `DEPLOYMENT_ROADMAP:
+-------------------
+${recommendations.recommendations.map((rec, i) => `${i + 1}. ${rec}`).join('\n')}
+
+END_OF_LOG
+`;
+
+    const blob = new Blob([content], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `Lattara_Audit_${new Date().getTime()}.txt`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
   if (showResults) {
     const score = calculateScore();
     const recommendations = getRecommendations();
@@ -276,8 +339,11 @@ const AssessmentPage = () => {
                       SCHEDULE_DIAGNOSTIC
                     </a>
                     
-                    <button className="border border-gray-600 text-gray-300 hover:border-white hover:text-white px-6 py-3 text-sm font-mono transition-colors">
-                      DOWNLOAD_LOGS
+                    <button 
+                      onClick={handleDownloadLogs}
+                      className="border border-gray-600 text-gray-300 hover:border-white hover:text-white px-6 py-3 text-sm font-mono transition-colors"
+                    >
+                      DOWNLOAD_PLAYBOOK
                     </button>
                   </div>
                 </div>
