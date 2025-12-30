@@ -25,7 +25,7 @@ const Header = () => {
                <Terminal size={20} />
             </div>
             <img
-              src="/lattara-logo-black.svg"
+              src="/logo_v2.svg"
               alt="Lattara"
               className="h-8 w-auto object-contain"
             />
