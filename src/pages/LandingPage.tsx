@@ -1,64 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import SEO from '../components/SEO';
-import { CheckCircle, TrendingUp, Clock, Users, ArrowRight, Star, Target, Shield, Activity } from 'lucide-react';
+import { CheckCircle, TrendingUp, Target, Shield, Activity, ArrowRight } from 'lucide-react';
+import LeadForm from '../components/LeadForm';
 
 const LandingPage = () => {
-  // HubSpot form embed
-  useEffect(() => {
-    // Load HubSpot forms embed script if not already present
-    if (!document.querySelector('script[src="//js.hsforms.net/forms/embed/v2.js"]')) {
-      const script = document.createElement('script');
-      script.src = '//js.hsforms.net/forms/embed/v2.js';
-      script.charset = 'utf-8';
-      script.type = 'text/javascript';
-      document.body.appendChild(script);
-      
-      script.onload = () => {
-        if (window.hbspt) {
-          window.hbspt.forms.create({
-            portalId: "45832447",
-            formId: "4474bab3-e337-4e40-ae85-a41d4c3ceed6",
-            region: "na1",
-            target: "#hubspot-lead-form"
-          });
-        }
-      };
-    }
-
-    // Load Calendly routing form integration
-    if (!document.querySelector('link[href="https://assets.calendly.com/assets/external/widget.css"]')) {
-      const link = document.createElement('link');
-      link.href = 'https://assets.calendly.com/assets/external/widget.css';
-      link.rel = 'stylesheet';
-      document.head.appendChild(link);
-    }
-
-    if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/forms.js"]')) {
-      const script = document.createElement('script');
-      script.src = 'https://assets.calendly.com/assets/external/forms.js';
-      script.type = 'text/javascript';
-      script.async = true;
-      document.body.appendChild(script);
-
-      script.onload = () => {
-        window.addEventListener('load', function() {
-          if (window.Calendly) {
-            window.Calendly.initHubspotForm({
-              "id": "4474bab3-e337-4e40-ae85-a41d4c3ceed6",
-              "url": "https://calendly.com/api/form_builder/forms/74fe6ff2-23ec-4c52-bbf9-0d74ca76aabb/submissions",
-              "options": {
-                "hide_event_type_details": 1,
-                "hide_gdpr_banner": 1,
-                "primary_color": "9d2235",
-                "parentElement": "#hubspot-lead-form"
-              }
-            });
-          }
-        });
-      };
-    }
-  }, []);
-
   const benefits = [
     'Gain full-funnel visibility',
     'Understand actual ROI',
@@ -127,7 +72,7 @@ const LandingPage = () => {
             </div>
 
             {/* Form Column */}
-            <div className="order-1 lg:order-2 bg-white p-1 rounded-none shadow-2xl shadow-gray-200/50 border border-gray-200">
+            <div className="order-1 lg:order-2 bg-white p-1 rounded-none shadow-2xl shadow-gray-200/50 border border-gray-200" id="assessment-form">
                <div className="border border-gray-100 p-8">
                   {/* Mobile Headline */}
                   <div className="text-center mb-8 lg:hidden">
@@ -151,8 +96,11 @@ const LandingPage = () => {
                     </p>
                   </div>
 
-                  {/* HubSpot Form */}
-                  <div id="hubspot-lead-form" className="min-h-[400px]"></div>
+                  {/* HubSpot Form Replacement */}
+                  <LeadForm 
+                    portalId="45832447" 
+                    formId="4474bab3-e337-4e40-ae85-a41d4c3ceed6" 
+                  />
 
                   {/* Trust Indicators */}
                   <div className="mt-6 pt-6 border-t border-gray-100 bg-gray-50 -mx-8 -mb-8 p-4 text-center">
@@ -198,7 +146,7 @@ const LandingPage = () => {
                 ROI Projections
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Calculated revenue impact estimates based on your current traffic volume and conversion deltas.
+                Calculated revenue impact estimates based on your current metrics and goals.
               </p>
             </div>
 
@@ -228,11 +176,11 @@ const LandingPage = () => {
           </p>
           
           <a
-            href="#hubspot-lead-form"
+            href="#assessment-form"
             className="inline-flex items-center space-x-2 bg-brand-red hover:bg-red-700 text-white px-8 py-4 font-mono text-sm transition-colors shadow-lg shadow-red-900/20"
             onClick={(e) => {
               e.preventDefault();
-              document.querySelector('#hubspot-lead-form')?.scrollIntoView({ behavior: 'smooth' });
+              document.querySelector('#assessment-form')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
             <span>SCHEDULE_ASSESSMENT</span>
