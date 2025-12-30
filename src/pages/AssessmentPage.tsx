@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
-import { CheckCircle, AlertCircle, ArrowRight, BarChart3, Terminal, Cpu } from 'lucide-react';
+import { CheckCircle, AlertCircle, ArrowRight, BarChart3, Terminal, Cpu, Activity } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Reveal from '../components/Reveal';
 
