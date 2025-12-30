@@ -81,7 +81,7 @@ const TechnologyShowcase = () => {
              <div className="text-center">
                 <p className="font-mono text-xs text-gray-400 mb-2">NEED_CUSTOM_INTEGRATION?</p>
                 <a href="/contact" className="text-brand-red font-mono text-sm hover:underline border-b border-brand-red pb-0.5">
-                   REQUEST_SPEC >
+                   REQUEST_SPEC &gt;
                 </a>
              </div>
           </div>
