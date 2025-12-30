@@ -301,19 +301,17 @@ const AssessmentPage = () => {
         ogType="website"
       />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <Reveal>
-          <div className="mb-12 border-b border-gray-200 pb-8 bg-white/80 backdrop-blur-sm p-6 border border-gray-100 shadow-sm">
-            <div className="inline-block bg-brand-red/10 text-brand-red text-xs px-2 py-1 mb-4">
-               SYS_ADMIN_TOOL
-            </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4 tracking-tight">
-              Infrastructure Audit
-            </h1>
-            <p className="text-gray-500">
-              Initialize diagnostic sequence to identify stack inefficiencies.
-            </p>
+        <div className="mb-12 border-b border-gray-200 pb-8 bg-white/80 backdrop-blur-sm p-6 border border-gray-100 shadow-sm">
+          <div className="inline-block bg-brand-red/10 text-brand-red text-xs px-2 py-1 mb-4">
+             SYS_ADMIN_TOOL
           </div>
-        </Reveal>
+          <h1 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4 tracking-tight">
+            Infrastructure Audit
+          </h1>
+          <p className="text-gray-500">
+            Initialize diagnostic sequence to identify stack inefficiencies.
+          </p>
+        </div>
 
         {/* Progress Bar - Segmented */}
         <div className="mb-8">

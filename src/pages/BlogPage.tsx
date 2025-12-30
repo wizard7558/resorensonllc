@@ -26,45 +26,41 @@ const BlogPage = () => {
         <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-brand-red/5 blur-[80px] rounded-full pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <Reveal>
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center space-x-2 text-brand-red font-mono text-sm mb-6">
-                 <Terminal size={16} />
-                 <span>SYSTEM_LOGS</span>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-brand-dark mb-6 tracking-tight">
-                Technical Briefs & <br/>
-                Strategic Protocols.
-              </h1>
-              <p className="text-xl text-gray-600 font-light max-w-2xl leading-relaxed">
-                Engineering-grade insights for the modern revenue architect.
-              </p>
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center space-x-2 text-brand-red font-mono text-sm mb-6">
+               <Terminal size={16} />
+               <span>SYSTEM_LOGS</span>
             </div>
-          </Reveal>
+            <h1 className="text-4xl md:text-5xl font-bold text-brand-dark mb-6 tracking-tight">
+              Technical Briefs & <br/>
+              Strategic Protocols.
+            </h1>
+            <p className="text-xl text-gray-600 font-light max-w-2xl leading-relaxed">
+              Engineering-grade insights for the modern revenue architect.
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Newsletter Signup - Technical Style */}
       <div className="border-b border-gray-200 bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-               <div className="max-w-xl">
-                  <h2 className="text-lg font-bold text-brand-dark font-mono uppercase mb-2">
-                     Subscribe_To_Updates
-                  </h2>
-                  <p className="text-gray-600 text-sm">
-                     Receive weekly optimization protocols and system alerts directly to your inbox.
-                  </p>
-               </div>
-               <div className="w-full md:w-auto flex-1 max-w-md">
-                  <NewsletterForm 
-                    portalId="45832447" 
-                    formId="6470b071-68f5-4c52-8264-5c83cab75259" 
-                  />
-               </div>
-            </div>
-          </Reveal>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+             <div className="max-w-xl">
+                <h2 className="text-lg font-bold text-brand-dark font-mono uppercase mb-2">
+                   Subscribe_To_Updates
+                </h2>
+                <p className="text-gray-600 text-sm">
+                   Receive weekly optimization protocols and system alerts directly to your inbox.
+                </p>
+             </div>
+             <div className="w-full md:w-auto flex-1 max-w-md">
+                <NewsletterForm 
+                  portalId="45832447" 
+                  formId="6470b071-68f5-4c52-8264-5c83cab75259" 
+                />
+             </div>
+          </div>
         </div>
       </div>
 

@@ -112,21 +112,19 @@ const ServicesPage = () => {
         <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-brand-red/5 blur-[80px] rounded-full pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <Reveal>
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center space-x-2 text-brand-red font-mono text-sm mb-6">
-                 <Terminal size={16} />
-                 <span>SYSTEM_CAPABILITIES</span>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-brand-dark mb-6 tracking-tight">
-                Engineering Your <br/>
-                Revenue Engine.
-              </h1>
-              <p className="text-xl text-gray-600 font-light max-w-2xl leading-relaxed">
-                We don't sell "marketing magic." We build the technical infrastructure that makes marketing work.
-              </p>
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center space-x-2 text-brand-red font-mono text-sm mb-6">
+               <Terminal size={16} />
+               <span>SYSTEM_CAPABILITIES</span>
             </div>
-          </Reveal>
+            <h1 className="text-4xl md:text-6xl font-bold text-brand-dark mb-6 tracking-tight">
+              Engineering Your <br/>
+              Revenue Engine.
+            </h1>
+            <p className="text-xl text-gray-600 font-light max-w-2xl leading-relaxed">
+              We don't sell "marketing magic." We build the technical infrastructure that makes marketing work.
+            </p>
+          </div>
         </div>
       </div>
 
